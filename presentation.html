@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#1a2847">
+<meta name="theme-color" content="#1b2a5b">
 <meta name="description" content="LE PROF — L'intelligence pédagogique derrière l'IA. Un livre d'Oscar Kakpo + un espace numérique pour passer à l'action.">
 <meta property="og:title" content="LE PROF — L'intelligence pédagogique derrière l'IA">
 <meta property="og:description" content="Un livre et un espace numérique pour les enseignants qui veulent garder la main sur l'IA. Téléchargement libre.">
@@ -11,33 +11,31 @@
 <meta property="og:url" content="https://oscarkakpo-create.github.io/LEPROF/presentation.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..700,0..100&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css">
 <title>LE PROF · L'intelligence pédagogique derrière l'IA</title>
 <style>
 :root{
-  --navy:#1a2847;--navy-2:#243461;--navy-soft:#eef0f5;
-  --gold:#d4a056;--gold-2:#c48d3f;--gold-soft:#f6ecd9;--gold-deep:#8a6324;
-  --teal:#2a7a68;--teal-2:#216053;--teal-soft:#e7f0ed;
+  --navy:#1b2a5b;--navy-2:#2a3c72;--navy-soft:#edeff6;
+  --gold:#d99a3e;--gold-2:#c4862f;--gold-soft:#fbf2e1;--gold-deep:#8a6324;
+  --teal:#227069;--teal-2:#1b5d57;--teal-soft:#e7f2f0;
   --coral:#c76f54;--coral-soft:#f8e9e2;
   --plum:#6b4e8c;--plum-soft:#efeaf6;
-  --ink:#1a2237;--body:#3b4252;--muted:#7a8094;
-  --cream:#f7f3ea;--cream-2:#faf6ee;--paper:#fff;--line:#e4e2d8;
+  --ink:#16224a;--body:#3a4466;--muted:#6a7494;
+  --cream:#f5f2ea;--cream-2:#fbfaf6;--paper:#fff;--line:#dcd9cf;
   --radius:14px;
   --sidebar-w:280px;
-  --serif:'Fraunces','Didot',Georgia,serif;
-  --sans:'Inter',-apple-system,'Segoe UI',Arial,sans-serif;
-  --shadow-sm:0 2px 10px #1a28470a;--shadow:0 8px 32px #1a28471a;
-  --shadow-lg:0 32px 80px #1a284733,0 4px 12px #1a28471c;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans',-apple-system,'Segoe UI',Arial,sans-serif;
+  --shadow-sm:0 2px 10px #1b2a5b0a;--shadow:0 8px 32px #1b2a5b1a;
+  --shadow-lg:0 32px 80px #1b2a5b33,0 4px 12px #1b2a5b1c;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream-2);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,p{margin:0}
-h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);letter-spacing:-.02em;font-variation-settings:"SOFT" 60,"opsz" 144}
-h1{font-size:clamp(42px,6vw,70px);line-height:1.02;font-weight:700;letter-spacing:-.035em;font-variation-settings:"SOFT" 50,"opsz" 144}
-h1 em{font-style:italic;color:var(--gold-deep);font-weight:400;font-variation-settings:"SOFT" 100,"opsz" 144}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);letter-spacing:-.02em;font-variation-settings:normal}
+h1{font-size:clamp(42px,6vw,70px);line-height:1.02;font-weight:600;letter-spacing:-.02em;font-variation-settings:normal}
+h1 em{font-style:italic;color:var(--gold-deep);font-weight:400;font-variation-settings:normal}
 h2{font-size:clamp(28px,3.5vw,40px);line-height:1.12;font-weight:600;letter-spacing:-.025em}
 h3{font-size:21px;line-height:1.25;font-weight:600}
 p{line-height:1.7}
@@ -70,12 +68,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .side-link.active{background:var(--gold);color:var(--navy);font-weight:600}
 .side-link svg{width:16px;height:16px;flex-shrink:0}
 .side-badge{margin-left:auto;font-size:8px;letter-spacing:.8px;font-weight:700;padding:2px 6px;border-radius:4px;text-transform:uppercase}
-.side-badge.essential{background:#2a7a68;color:#fff}
+.side-badge.essential{background:#227069;color:#fff}
 .side-badge.premium{background:var(--gold-soft);color:var(--gold-deep)}
 .side-link.active .side-badge{background:#ffffff22;color:var(--navy)}
 
 .side-cta{background:var(--gold);color:var(--navy);padding:12px 14px;border-radius:9px;text-align:center;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:.3px;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s;margin-top:auto}
-.side-cta:hover{background:var(--gold-2);color:var(--navy);transform:translateY(-1px);box-shadow:0 4px 14px #d4a05640}
+.side-cta:hover{background:var(--gold-2);color:var(--navy);transform:translateY(-1px);box-shadow:0 4px 14px #d99a3e40}
 
 .side-foot{font-size:11px;color:#ffffff80;text-align:center;padding-top:14px;border-top:1px solid #ffffff1a;line-height:1.5}
 
@@ -91,11 +89,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:all .18s;cursor:pointer;font-family:inherit}
 .btn:hover{transform:translateY(-1px)}
 .btn.gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}
-.btn.gold:hover{background:var(--gold-2);border-color:var(--gold-2);box-shadow:0 6px 20px #d4a05640}
+.btn.gold:hover{background:var(--gold-2);border-color:var(--gold-2);box-shadow:0 6px 20px #d99a3e40}
 .btn.navy{background:var(--navy);color:#fff;border-color:var(--navy)}
 .btn.navy:hover{background:var(--navy-2);box-shadow:var(--shadow)}
 .btn.teal{background:var(--teal);color:#fff;border-color:var(--teal)}
-.btn.teal:hover{background:var(--teal-2);box-shadow:0 6px 20px #2a7a6840}
+.btn.teal:hover{background:var(--teal-2);box-shadow:0 6px 20px #22706940}
 .btn.outline{background:transparent;color:var(--navy);border-color:var(--navy)}
 .btn.outline:hover{background:var(--navy);color:#fff}
 .btn.outline-gold{background:transparent;color:var(--gold-deep);border-color:var(--gold)}
@@ -118,12 +116,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .cover-wrap{display:flex;justify-content:center;align-items:center;perspective:1800px}
 .book-cover{width:340px;height:470px;background:var(--navy);border-radius:4px;position:relative;color:#fff;box-shadow:var(--shadow-lg);transform:rotateY(-7deg) rotateX(2deg);transition:transform .5s;overflow:hidden}
 .book-cover:hover{transform:rotateY(-3deg) rotateX(0deg)}
-.book-cover:before{content:'';position:absolute;left:0;top:0;bottom:0;width:7px;background:linear-gradient(90deg,#0f1b35,#1a2847);box-shadow:inset -1px 0 0 #d4a05644}
+.book-cover:before{content:'';position:absolute;left:0;top:0;bottom:0;width:7px;background:linear-gradient(90deg,#131f45,#1b2a5b);box-shadow:inset -1px 0 0 #d99a3e44}
 .book-cover-inner{position:absolute;inset:30px;border:1px solid #ffffff22;padding:30px 24px;display:flex;flex-direction:column;justify-content:space-between}
 .cover-collection{font-size:9px;letter-spacing:2.2px;font-weight:600;color:var(--gold);text-transform:uppercase;line-height:1.4}
 .cover-illus{align-self:center;margin:12px 0}
 .cover-illus svg{width:120px;height:120px}
-.cover-title{font-family:var(--serif);font-size:54px;font-weight:700;letter-spacing:-.03em;line-height:.95;font-variation-settings:"SOFT" 40,"opsz" 144}
+.cover-title{font-family:var(--serif);font-size:54px;font-weight:700;letter-spacing:-.03em;line-height:.95;font-variation-settings:normal}
 .cover-sub{font-family:var(--serif);font-style:italic;font-size:14px;opacity:.9;margin-top:12px;line-height:1.4}
 .cover-rule{width:36px;height:2px;background:var(--gold);margin:14px 0}
 .cover-tags{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:600;margin-top:4px}
@@ -142,19 +140,19 @@ section.alt{background:var(--cream)}
 .chapters-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .chapter{background:var(--cream-2);padding:22px 26px;display:flex;align-items:center;gap:20px;transition:background .15s}
 .chapter:hover{background:#fffaf0}
-.chapter-num{font-family:var(--serif);font-size:30px;color:var(--gold);font-weight:700;min-width:40px;line-height:1;font-variation-settings:"SOFT" 60,"opsz" 144}
+.chapter-num{font-family:var(--serif);font-size:30px;color:var(--gold);font-weight:700;min-width:40px;line-height:1;font-variation-settings:normal}
 .chapter-title{font-family:var(--serif);font-size:17px;color:var(--navy);font-weight:600;flex:1;letter-spacing:-.01em}
 .chapter-arrow{color:var(--gold);opacity:.5;font-size:22px;line-height:1}
 
 /* PILLARS */
 .pillars-section{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.pillars-section:before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,#d4a05622,transparent 70%)}
+.pillars-section:before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,#d99a3e22,transparent 70%)}
 .pillars-section .section-head h2{color:#fff}
 .pillars-section .eyebrow{color:var(--gold)}
 .pillars-section .lead{color:#ffffffbb}
 .pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:30px;position:relative}
 .pillar{text-align:center}
-.pillar-mark{width:72px;height:72px;background:#ffffff10;border:1px solid #ffffff22;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;color:var(--gold);font-family:var(--serif);font-size:24px;font-weight:700;font-variation-settings:"SOFT" 50,"opsz" 144}
+.pillar-mark{width:72px;height:72px;background:#ffffff10;border:1px solid #ffffff22;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;color:var(--gold);font-family:var(--serif);font-size:24px;font-weight:700;font-variation-settings:normal}
 .pillar h3{color:#fff;font-size:20px;margin-bottom:8px}
 .pillar p{color:#ffffffb3;font-size:14px;line-height:1.6}
 
@@ -179,7 +177,7 @@ section.alt{background:var(--cream)}
 .author-section{background:var(--cream)}
 .author-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;display:grid;grid-template-columns:120px 1fr;gap:36px;align-items:center;max-width:860px;margin:0 auto;box-shadow:var(--shadow-sm);position:relative;overflow:hidden}
 .author-card:before{content:'';position:absolute;top:0;right:0;bottom:0;width:5px;background:linear-gradient(to bottom,var(--gold),var(--teal))}
-.author-avatar{width:120px;height:120px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:46px;font-weight:700;font-variation-settings:"SOFT" 40,"opsz" 144}
+.author-avatar{width:120px;height:120px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--serif);font-size:46px;font-weight:700;font-variation-settings:normal}
 .author-info .eyebrow{margin-bottom:8px}
 .author-info h3{margin-bottom:10px}
 .author-info p{color:var(--body);font-size:15px}
@@ -245,7 +243,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
   <aside class="sidebar" id="sidebar">
     <a class="side-brand" href="index.html">
       <span class="side-brand-mark">
-        <svg viewBox="0 0 24 24"><circle cx="15" cy="7" r="2.3" fill="#d4a056"/><path d="M15 7 L9 15 M15 7 L12 15 M15 7 L15.5 15.5 M15 7 L17 15" stroke="#d4a056" stroke-width="0.9" opacity="0.65" stroke-linecap="round"/><circle cx="12" cy="15.5" r="2.6" fill="#fff"/><rect x="9.5" y="15.5" width="5" height="3.5" rx="0.6" fill="#fff"/></svg>
+        <svg viewBox="0 0 24 24"><circle cx="15" cy="7" r="2.3" fill="#d99a3e"/><path d="M15 7 L9 15 M15 7 L12 15 M15 7 L15.5 15.5 M15 7 L17 15" stroke="#d99a3e" stroke-width="0.9" opacity="0.65" stroke-linecap="round"/><circle cx="12" cy="15.5" r="2.6" fill="#fff"/><rect x="9.5" y="15.5" width="5" height="3.5" rx="0.6" fill="#fff"/></svg>
       </span>
       <span class="side-brand-text">
         <span class="side-brand-name">LE PROF</span>
@@ -356,18 +354,18 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
                 <div class="cover-collection">Collection<br>Pédagogie &amp; Intelligence Artificielle</div>
                 <div class="cover-illus">
                   <svg viewBox="0 0 120 120" fill="none">
-                    <circle cx="78" cy="30" r="7" fill="#d4a056"/>
-                    <circle cx="78" cy="30" r="18" fill="#d4a056" opacity="0.14"/>
-                    <path d="M78 30 L40 72 M78 30 L55 75 M78 30 L62 80 M78 30 L70 82 M78 30 L85 78" stroke="#d4a056" stroke-width="0.9" opacity="0.55" stroke-linecap="round"/>
+                    <circle cx="78" cy="30" r="7" fill="#d99a3e"/>
+                    <circle cx="78" cy="30" r="18" fill="#d99a3e" opacity="0.14"/>
+                    <path d="M78 30 L40 72 M78 30 L55 75 M78 30 L62 80 M78 30 L70 82 M78 30 L85 78" stroke="#d99a3e" stroke-width="0.9" opacity="0.55" stroke-linecap="round"/>
                     <circle cx="60" cy="76" r="12" fill="#fff"/>
                     <rect x="48" y="76" width="24" height="22" rx="2" fill="#fff"/>
-                    <rect x="52" y="82" width="16" height="2" fill="#d4a056"/>
+                    <rect x="52" y="82" width="16" height="2" fill="#d99a3e"/>
                     <rect x="20" y="55" width="18" height="12" rx="1.5" fill="#fff" opacity="0.9"/>
-                    <rect x="23" y="59" width="12" height="1.5" fill="#d4a056"/>
-                    <rect x="23" y="62" width="9" height="1.5" fill="#d4a056"/>
+                    <rect x="23" y="59" width="12" height="1.5" fill="#d99a3e"/>
+                    <rect x="23" y="62" width="9" height="1.5" fill="#d99a3e"/>
                     <rect x="82" y="60" width="18" height="12" rx="1.5" fill="#fff" opacity="0.9"/>
-                    <rect x="85" y="64" width="12" height="1.5" fill="#d4a056"/>
-                    <rect x="85" y="67" width="9" height="1.5" fill="#d4a056"/>
+                    <rect x="85" y="64" width="12" height="1.5" fill="#d99a3e"/>
+                    <rect x="85" y="67" width="9" height="1.5" fill="#d99a3e"/>
                     <rect x="22" y="72" width="18" height="12" rx="1.5" fill="#fff" opacity="0.9"/>
                     <rect x="80" y="78" width="18" height="12" rx="1.5" fill="#fff" opacity="0.9"/>
                   </svg>

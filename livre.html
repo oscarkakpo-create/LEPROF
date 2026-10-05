@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#244b3d">
+<meta name="theme-color" content="#1b2a5b">
 <meta name="description" content="Le livre associé à LE PROF — téléchargement libre et gratuit.">
 <meta property="og:title" content="LE PROF — Le livre">
 <meta property="og:description" content="Le livre qui accompagne l'atelier du professeur augmenté. Téléchargement libre.">
@@ -11,12 +11,10 @@
 <meta property="og:url" content="https://oscarkakpo-create.github.io/LEPROF/livre.html">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,0..100;1,9..144,400..600,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/fonts.css">
 <title>LE PROF · Le livre</title>
 <style>
-:root{--ink:#25392f;--muted:#69746d;--green:#284e3e;--green-2:#3c6654;--green-soft:#eef3ed;--bg:#fafaf7;--line:#e4e7df;--white:#fff;--orange:#aa5e38;--shadow:0 5px 20px #26392f06;--radius:16px;--sans:'Instrument Sans',-apple-system,"Segoe UI",Arial,sans-serif;--serif:'Fraunces',Georgia,"Times New Roman",serif}
+:root{--ink:#152045;--muted:#666a77;--green:#1a2856;--green-2:#3c6662;--green-soft:#f3f1ed;--bg:#faf9f7;--line:#e8e5de;--white:#fff;--orange:#aa5e38;--shadow:0 5px 20px #15204506;--radius:16px;--sans:'IBM Plex Sans',-apple-system,'Segoe UI',Arial,sans-serif;--serif:'Newsreader',Georgia,'Times New Roman',serif}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65}
 a{color:var(--green)}
@@ -28,42 +26,51 @@ h3{font-size:15px;font-weight:650}
 .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px;gap:14px;flex-wrap:wrap}
 .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink)}
 .brand-mark{width:42px;height:46px;border-radius:12px 12px 5px 12px;background:var(--green);color:#fff;display:grid;place-items:center;position:relative;font-weight:700}
-.brand-mark:after{content:'';width:8px;height:8px;background:#d7b67b;border-radius:100%;position:absolute;right:-3px;top:5px;border:2px solid var(--bg)}
+.brand-mark:after{content:'';width:8px;height:8px;background:#d99a3e;border-radius:100%;position:absolute;right:-3px;top:5px;border:2px solid var(--bg)}
 .brand-name{font-weight:800;letter-spacing:1.1px;font-size:21px;line-height:1.2;display:block}
 .brand-sub{font-size:10px;letter-spacing:.25px;color:var(--muted);display:block;margin-top:2px}
 .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:11px 18px;background:#fff;font-size:12px;font-weight:600;text-decoration:none;color:var(--ink);transition:background .15s,border-color .15s,transform .15s}
-.btn:hover{background:#f1f4ed;border-color:#c8d4c3}
+.btn:hover{background:#f4f2ed;border-color:#c2c7d5}
 .btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
-.btn.primary:hover{background:#1d3e30}
+.btn.primary:hover{background:#141f43}
 .btn.big{padding:16px 26px;font-size:14px;border-radius:12px}
 .hero{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin-bottom:60px}
-.cover{width:260px;height:360px;background:linear-gradient(145deg,#2d5744,#1a3b2b);border-radius:8px;box-shadow:0 24px 60px #0e2a1c33,0 2px 6px #0e2a1c22;position:relative;overflow:hidden;color:#fff;padding:28px 22px;display:flex;flex-direction:column;justify-content:space-between}
-.cover:before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:#1a3b2b;box-shadow:inset -1px 0 0 #d7b67b33}
+.cover{width:260px;height:360px;background:linear-gradient(145deg,#1d2d61,#131f45);border-radius:8px;box-shadow:0 24px 60px #0e162f33,0 2px 6px #0e162f22;position:relative;overflow:hidden;color:#fff;padding:28px 22px;display:flex;flex-direction:column;justify-content:space-between}
+.cover:before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:#131f45;box-shadow:inset -1px 0 0 #d99a3e33}
 .cover .tag{font-size:9px;letter-spacing:2.5px;opacity:.75;font-weight:600;text-transform:uppercase}
 .cover .title{font-family:var(--serif);font-size:30px;line-height:1.1;letter-spacing:-.5px;margin-top:14px}
-.cover .accent{width:34px;height:3px;background:#d7b67b;margin-top:12px}
+.cover .accent{width:34px;height:3px;background:#d99a3e;margin-top:12px}
 .cover .author{font-size:11px;opacity:.85;letter-spacing:.4px}
-.hero-copy .eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;color:#7b8875;text-transform:uppercase}
+.hero-copy .eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;color:#6f768e;text-transform:uppercase}
 .hero-copy h1{margin:14px 0 18px}
-.hero-copy p.lede{font-size:16px;color:#4b5b4e;max-width:520px;margin-bottom:24px}
+.hero-copy p.lede{font-size:16px;color:#464c60;max-width:520px;margin-bottom:24px}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .cta-note{font-size:11px;color:var(--muted);margin-top:14px}
-.badge-free{display:inline-flex;align-items:center;gap:5px;background:#e9f2e9;color:#466b49;padding:5px 10px;border-radius:6px;font-size:10px;font-weight:650;letter-spacing:.3px;margin-bottom:12px}
+.badge-free{display:inline-flex;align-items:center;gap:5px;background:#f2efe9;color:#466b68;padding:5px 10px;border-radius:6px;font-size:10px;font-weight:650;letter-spacing:.3px;margin-bottom:12px}
 .pitch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px}
 .pitch-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
 .pitch-card h3{margin-bottom:8px;color:var(--green)}
-.pitch-card p{font-size:13px;color:#5b6b5b}
+.pitch-card p{font-size:13px;color:#565c70}
 .section{margin-bottom:50px}
-.section .eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;color:#7b8875;text-transform:uppercase;margin-bottom:10px}
+.section .eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;color:#6f768e;text-transform:uppercase;margin-bottom:10px}
 .section h2{margin-bottom:16px}
-.section p{color:#4b5b4e;max-width:720px}
-.toc{background:#f0f4ec;border:1px solid #dce5d2;border-radius:var(--radius);padding:24px 28px}
-.toc ol{margin:12px 0 0;padding-left:22px;color:#4b5b4e}
+.section p{color:#464c60;max-width:720px}
+.toc{background:#f4f2ec;border:1px solid #e5e0d2;border-radius:var(--radius);padding:24px 28px}
+.toc ol{margin:12px 0 0;padding-left:22px;color:#464c60}
 .toc li{padding:4px 0}
 .footer{margin-top:70px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted)}
 .pdf-missing{background:#fdf6ec;border:1px solid #ead9bd;border-radius:12px;padding:16px 20px;color:#8a6a3a;font-size:12px;margin-top:14px;line-height:1.6}
 .pdf-missing strong{color:#704f20}
 @media(max-width:780px){.hero{grid-template-columns:1fr;gap:32px}.cover{margin:0 auto}.pitch{grid-template-columns:1fr}h1{font-size:34px}.wrap{padding:24px 20px 50px}}
+/* Charte du livre LE PROF : couverture réelle, surtitres sarcelle précédés du trait ocre. */
+img.cover{display:block;width:260px;height:auto;padding:0;background:none;border-radius:4px}
+h1{font-weight:500;color:#1b2a5b;letter-spacing:-.6px}
+.hero-copy .eyebrow,.section .eyebrow{color:#227069;display:flex;align-items:center;gap:10px}
+.hero-copy .eyebrow:before,.section .eyebrow:before{content:'';width:18px;height:2px;background:#d99a3e;flex-shrink:0}
+.pitch-card{border-top:3px solid #d99a3e}
+.pitch-card h3{font-family:var(--serif);font-size:19px;font-weight:600;color:#1b2a5b}
+.section h2{font-family:var(--serif);font-size:26px;font-weight:600;color:#1b2a5b}
+.badge-free{background:#e7f2f0;color:#227069}
 </style>
 </head>
 <body>
@@ -81,14 +88,7 @@ h3{font-size:15px;font-weight:650}
   </header>
 
   <section class="hero">
-    <div class="cover" aria-hidden="true">
-      <div>
-        <div class="tag">Le livre</div>
-        <div class="title">LE PROF</div>
-        <div class="accent"></div>
-      </div>
-      <div class="author">L'atelier du professeur augmenté</div>
-    </div>
+    <img class="cover" src="assets/couverture-livre.jpg" width="560" height="754" alt="Couverture du livre LE PROF — L'intelligence pédagogique derrière l'IA, Oscar Kakpo">
     <div class="hero-copy">
       <span class="badge-free">● Téléchargement libre</span>
       <div class="eyebrow">Le livre associé</div>
