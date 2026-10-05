@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1a2847">
-<meta name="description" content="LE PROF · 24 prompts prêts à copier, 3 checklists imprimables, modèles. Libres et classés par usage.">
-<meta property="og:title" content="LE PROF — 24 prompts libres pour les enseignants">
+<meta name="description" content="LE PROF · 64 prompts prêts à copier, 3 checklists imprimables, modèles. Libres et classés par usage.">
+<meta property="og:title" content="LE PROF — 64 prompts libres pour les enseignants">
 <meta property="og:description" content="Prompts prêts à copier, avec exemples. Pour les enseignants qui veulent garder la main sur l'IA.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..700,0..100&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<title>LE PROF · 24 prompts libres pour enseignants</title>
+<title>LE PROF · 64 prompts libres pour enseignants</title>
 <style>
 :root{
   --navy:#1a2847;--navy-2:#243461;--navy-soft:#eef0f5;
@@ -137,6 +137,13 @@ section.alt{background:var(--cream)}
 .prompt-tag.cat-verification{background:#e5efe9;color:#466b4e}
 .prompt-tag.cat-differenciation{background:#f3eff8;color:#765999}
 .prompt-tag.cat-organisation{background:#f7f3e3;color:#8a7544}
+.prompt-tag.cat-engagement{background:#fde8e4;color:#b8452e}
+.prompt-tag.cat-classe{background:#e3f1f4;color:#2f7184}
+.prompt-tag.cat-ia{background:#e8ecfb;color:#4a5bb0}
+.prompt-tag.cat-pro{background:#eef5e1;color:#5d7a2a}
+.prompt-search{width:100%;margin-top:14px;padding:11px 15px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:14px;background:var(--cream-2);color:var(--body)}
+.prompt-search:focus{outline:none;border-color:var(--gold);background:#fff}
+.prompts-empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:30px;font-style:italic}
 .prompt-body{background:var(--cream-2);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.65;color:#2d3645;white-space:pre-wrap;max-height:200px;overflow:auto}
 .prompt-body::-webkit-scrollbar{width:7px}
 .prompt-body::-webkit-scrollbar-thumb{background:#c9c7bd;border-radius:4px}
@@ -244,7 +251,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
       <div class="hero-copy">
         <span class="eyebrow gold">Bibliothèque libre</span>
         <h1>Des prompts qui tiennent <em>vraiment</em> en classe.</h1>
-        <p class="lead">24 prompts prêts à copier, 8 catégories, un exemple de résultat pour chacun. Pour les enseignants qui veulent gagner du temps sans y perdre leur jugement.</p>
+        <p class="lead"><span data-count="prompts">64</span> prompts prêts à copier, <span data-count="cats">12</span> catégories, un exemple de résultat pour chacun. Pour les enseignants qui veulent gagner du temps sans y perdre leur jugement.</p>
         <div class="hero-ctas">
           <a class="btn gold" href="#prompts">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
@@ -255,8 +262,8 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
           </a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><span class="stat-num">24</span><span class="stat-lbl">Prompts</span></div>
-          <div class="stat"><span class="stat-num">8</span><span class="stat-lbl">Catégories</span></div>
+          <div class="stat"><span class="stat-num" data-count="prompts">64</span><span class="stat-lbl">Prompts</span></div>
+          <div class="stat"><span class="stat-num" data-count="cats">12</span><span class="stat-lbl">Catégories</span></div>
           <div class="stat"><span class="stat-num">3</span><span class="stat-lbl">Checklists</span></div>
           <div class="stat"><span class="stat-num">0 €</span><span class="stat-lbl">Toujours</span></div>
         </div>
@@ -278,7 +285,7 @@ Structure attendue en 3 parties :
 Partie 1 — Comprendre et sélectionner
 Partie 2 — Analyser et justifier
 Partie 3 — Transférer et discuter...</pre>
-        <span class="ill-tag">+ 23 autres prompts similaires ↓</span>
+        <span class="ill-tag">+ <span data-count="others">63</span> autres prompts similaires ↓</span>
       </aside>
     </div>
   </div>
@@ -290,11 +297,12 @@ Partie 3 — Transférer et discuter...</pre>
     <div class="cat-nav">
       <div class="cat-nav-head">
         <span class="eyebrow">1 · Prompts contextualisés</span>
-        <span class="counter" id="counter">24 prompts affichés</span>
+        <span class="counter" id="counter">64 prompts affichés</span>
       </div>
       <div class="cat-chips" id="cat-chips">
         <!-- Injected -->
       </div>
+      <input type="search" class="prompt-search" id="prompt-search" placeholder="Rechercher un prompt : bulletin, débat, QCM, parents…" aria-label="Rechercher un prompt">
     </div>
     <div class="prompts-grid" id="prompts-grid"></div>
   </div>
@@ -439,7 +447,11 @@ const CATS = [
   {id:'communication', label:'Communication', emoji:'💬'},
   {id:'verification', label:'Vérification', emoji:'🛡️'},
   {id:'differenciation', label:'Différenciation', emoji:'🧩'},
-  {id:'organisation', label:'Organisation', emoji:'📅'}
+  {id:'organisation', label:'Organisation', emoji:'📅'},
+  {id:'engagement', label:'Engagement', emoji:'🎯'},
+  {id:'classe', label:'Vie de classe', emoji:'🤝'},
+  {id:'ia', label:'Éduquer à l’IA', emoji:'🤖'},
+  {id:'pro', label:'Développement pro', emoji:'🌱'}
 ];
 
 const PROMPTS = [
@@ -874,7 +886,696 @@ Produisez un document structuré :
 8. PROCÉDURE DE RENDU : plateforme, format, délai, pénalités.
 
 Contraintes : consigne auto-portante (l'étudiant n'a pas besoin de poser 10 questions pour commencer).`},
+  // ============ NOUVEAUX PROMPTS (bibliothèque enrichie) ============
+  // ---- Préparation ----
+  {cat:'cours',title:'Concevoir une situation-problème d’ouverture',sub:'Une énigme de départ qui donne envie d’apprendre la notion.',tip:'Partez d’une situation que vos élèves connaissent dans leur quotidien.',example:'« Le même téléphone coûte 180 000 FCFA à Dakar et 210 000 FCFA à Abidjan : qui a raison, le vendeur ou le client ? » · Question de départ · 3 pistes d’hypothèses · lien avec la notion de prix de marché.',body:`Rôle : concepteur de séquences d'apprentissage.
+Mission : proposer 3 situations-problèmes pour ouvrir une séance.
+
+Contexte :
+- Discipline : [matière]
+- Niveau : [classe / public]
+- Notion visée : [notion]
+- Contexte local des élèves : [ville, pays, centres d'intérêt]
+
+Pour chaque situation, produisez :
+1. Le récit court de la situation (5 lignes maximum).
+2. La question-problème posée aux élèves.
+3. Les hypothèses spontanées probables (justes et fausses).
+4. Le lien explicite avec la notion à construire.
+5. La durée d'exploitation conseillée.
+
+Contraintes : situations réalistes et culturellement proches des élèves, aucune réponse évidente en 30 secondes, pas de données inventées présentées comme réelles.`},
+  {cat:'cours',title:'Diagnostiquer les prérequis en 10 minutes',sub:'Un test d’entrée court pour savoir d’où partent les élèves.',tip:'Administrez-le en début de chapitre et ne le notez pas : c’est un outil pour vous.',example:'6 questions rapides (2 par prérequis) · tableau d’interprétation : « Si moins de 50 % réussissent la Q3, reprendre la proportionnalité avant la séance 2 ».',body:`Rôle : enseignant qui prépare un nouveau chapitre.
+Mission : construire un test diagnostique de 10 minutes.
+
+Entrées :
+- Chapitre à venir : [titre]
+- Prérequis supposés : [liste de 3 à 4 notions]
+- Niveau : [classe]
+
+Produisez :
+1. 6 à 8 questions courtes (2 par prérequis), du plus simple au plus exigeant.
+2. Les réponses attendues.
+3. Pour chaque question, l'erreur typique et ce qu'elle révèle.
+4. Un tableau de décision : "si tel taux de réussite, alors telle action avant le chapitre".
+
+Contraintes : non noté, faisable sans calculatrice ni document, vocabulaire du niveau.`},
+  {cat:'cours',title:'Préparer une trace écrite de fin de séance',sub:'La synthèse que les élèves copient ou reçoivent.',tip:'Donnez votre propre déroulé : la trace doit refléter ce qui a été fait, pas un cours idéal.',example:'Encadré « Je retiens » de 8 lignes · 1 définition · 1 exemple résolu · 1 schéma à compléter · 2 questions d’auto-vérification.',body:`Rôle : enseignant soucieux de la mémorisation.
+Mission : rédiger la trace écrite de la séance suivante.
+
+Ce qui a été fait en classe :
+"""
+[résumé de la séance, notions vues, exemples utilisés]
+"""
+
+Niveau : [classe]
+
+Produisez :
+1. Un encadré "Je retiens" (10 lignes maximum).
+2. Une définition formulée avec les mots du niveau.
+3. Un exemple résolu repris de la séance.
+4. Un schéma ou tableau simple à compléter par l'élève.
+5. Deux questions d'auto-vérification avec leur réponse au verso.
+
+Contraintes : pas de notion non vue en classe, phrases courtes, lisible en 2 minutes.`},
+  // ---- Supports ----
+  {cat:'supports',title:'Créer une fiche de révision en carte mentale',sub:'Un chapitre condensé en une structure visuelle.',tip:'Demandez ensuite une version « à trous » pour faire réviser activement.',example:'Centre : « La photosynthèse » · 4 branches (réactifs, produits, lieu, conditions) · 2 à 3 mots-clés par branche · 1 piège fréquent signalé en rouge.',body:`Rôle : spécialiste de la mémorisation.
+Mission : transformer ce chapitre en carte mentale de révision.
+
+Contenu du chapitre :
+"""
+[coller le cours ou le plan]
+"""
+
+Niveau : [classe]
+
+Produisez :
+1. Le concept central.
+2. 4 à 6 branches principales, avec 2 à 4 mots-clés chacune.
+3. Les liens entre branches (flèches et verbe de liaison).
+4. Les 3 pièges les plus fréquents, signalés.
+5. Une version "à trous" de la même carte pour la révision active.
+
+Contraintes : mots-clés, pas de phrases. Hiérarchie claire. Pas d'information absente du cours.`},
+  {cat:'supports',title:'Rédiger un texte de lecture adapté au niveau',sub:'Un texte original sur un thème, calibré en longueur et en vocabulaire.',tip:'Précisez les mots de vocabulaire à réinvestir : ils seront intégrés naturellement.',example:'Texte de 250 mots sur la saison des pluies au Bénin · 6 mots du lexique ciblé en gras · 5 questions (2 littérales, 2 inférentielles, 1 avis argumenté).',body:`Rôle : auteur de supports de lecture.
+Mission : écrire un texte original et ses questions de compréhension.
+
+Paramètres :
+- Thème : [thème]
+- Niveau / âge : [classe]
+- Longueur : [nombre de mots]
+- Type de texte : [récit / documentaire / argumentatif / dialogue]
+- Vocabulaire à intégrer : [liste]
+- Contexte culturel souhaité : [à préciser]
+
+Produisez :
+1. Le texte, avec un titre.
+2. 5 questions : 2 de repérage, 2 d'inférence, 1 d'opinion argumentée.
+3. Le corrigé.
+4. Une variante simplifiée (phrases plus courtes) pour les lecteurs fragiles.
+
+Contraintes : texte inventé, aucune citation attribuée à une personne réelle, aucun stéréotype.`},
+  {cat:'supports',title:'Concevoir une fiche d’exercices progressive',sub:'Du geste de base au problème de synthèse.',tip:'Indiquez les exercices de votre manuel déjà faits pour éviter les doublons.',example:'Série de 8 exercices : 3 d’application directe ★ · 3 d’entraînement ★★ · 2 problèmes de synthèse ★★★ · corrigé détaillé du n°4 pour l’autocorrection.',body:`Rôle : auteur de manuels d'exercices.
+Mission : produire une fiche d'exercices progressive.
+
+Entrées :
+- Discipline et notion : [à préciser]
+- Niveau : [classe]
+- Exercices déjà travaillés : [références ou "aucun"]
+- Durée de travail prévue : [minutes]
+
+Produisez :
+1. 3 exercices d'application directe (niveau ★).
+2. 3 exercices d'entraînement avec une petite variation (niveau ★★).
+3. 2 problèmes de synthèse en contexte (niveau ★★★).
+4. Le corrigé bref de chaque exercice et le corrigé détaillé d'un exercice ★★.
+
+Contraintes : consignes courtes et non ambiguës, données numériques réalistes, une seule difficulté nouvelle par exercice.`},
+  // ---- Évaluation ----
+  {cat:'evaluation',title:'Créer des questions à réponse courte',sub:'Vérifier la compréhension sans QCM ni dissertation.',tip:'Demandez des questions « pourquoi » et « que se passerait-il si » : elles résistent mieux au par-cœur.',example:'Q : « Pourquoi le fer rouille-t-il plus vite au bord de la mer ? » · Réponse attendue en 2 lignes · Éléments obligatoires : eau, sel, oxydation · Barème sur 2 points.',body:`Rôle : concepteur d'évaluations.
+Mission : rédiger 8 questions à réponse courte.
+
+Entrées :
+- Notion évaluée : [notion]
+- Niveau : [classe]
+- Objectif d'apprentissage : [objectif]
+
+Pour chaque question :
+1. L'énoncé (une phrase).
+2. La réponse modèle (2 à 3 lignes).
+3. Les éléments obligatoires pour avoir tous les points.
+4. Une réponse partielle typique et sa note.
+5. Le barème.
+
+Contraintes : au moins 4 questions de type "pourquoi" ou "que se passerait-il si". Aucune question qui se résout par une simple définition apprise.`},
+  {cat:'evaluation',title:'Préparer une évaluation orale',sub:'Questions, relances et grille pour un oral équitable.',tip:'Gardez les mêmes questions-socles pour tous : c’est la clé de l’équité.',example:'3 questions-socles identiques pour tous · 2 relances par question selon la réponse · grille 4 critères (exactitude, raisonnement, vocabulaire, aisance) notée sur 20.',body:`Rôle : examinateur expérimenté.
+Mission : préparer un oral de [durée] minutes par élève.
+
+Entrées :
+- Programme évalué : [chapitres]
+- Niveau : [classe]
+- Compétences visées : [liste]
+
+Produisez :
+1. 3 questions-socles posées à tous.
+2. Pour chaque question : une relance d'aide et une relance d'approfondissement.
+3. Une grille de 4 critères avec descripteurs sur 4 niveaux.
+4. Une formule d'accueil qui met l'élève en confiance.
+5. Une fiche de prise de notes pour l'examinateur.
+
+Contraintes : questions ouvertes, aucune question piège, temps de préparation précisé.`},
+  {cat:'evaluation',title:'Construire une auto-évaluation élève',sub:'Une fiche pour que l’élève situe lui-même ses acquis.',tip:'Comparez l’auto-évaluation avec vos résultats : les écarts sont précieux.',example:'Tableau « Je sais… » de 6 lignes · échelle 🔴🟠🟢 · pour chaque ligne un mini-exercice de preuve · encadré final « Ce que je vais retravailler ».',body:`Rôle : enseignant qui développe l'autonomie des élèves.
+Mission : créer une fiche d'auto-évaluation de fin de chapitre.
+
+Entrées :
+- Chapitre : [titre]
+- Objectifs visés : [liste]
+- Niveau : [classe]
+
+Produisez :
+1. 5 à 8 affirmations "Je sais..." / "Je suis capable de...".
+2. Une échelle simple à 3 niveaux (pas encore / presque / acquis).
+3. Pour chaque affirmation, un mini-exercice qui permet de vérifier.
+4. Un encadré "Ce que je vais retravailler et comment".
+5. Une consigne d'utilisation pour l'élève.
+
+Contraintes : formulations à la première personne, vocabulaire du niveau, aucune note.`},
+  // ---- Correction ----
+  {cat:'correction',title:'Rédiger des appréciations de bulletin',sub:'Des commentaires personnalisés, justes et différents.',tip:'Donnez 3 faits par élève (résultats, attitude, progrès) : l’IA ne doit rien inventer.',example:'« Trimestre encourageant : vos résultats en géométrie progressent nettement (de 9 à 13). La participation orale doit maintenant suivre. Continuez ainsi. »',body:`Rôle : professeur principal attentif.
+Mission : rédiger des appréciations de bulletin.
+
+Pour chaque élève, je fournis (anonymisé) :
+- Prénom ou code : [ ]
+- Moyenne et évolution : [ ]
+- Points forts observés : [ ]
+- Points à améliorer : [ ]
+- Attitude : [ ]
+
+Produisez pour chaque élève :
+1. Une appréciation de 2 à 3 phrases (250 caractères maximum).
+2. Un ton : constat factuel + encouragement + conseil précis.
+
+Contraintes : n'utilisez que les faits fournis. Pas de formules toutes faites répétées d'un élève à l'autre. Aucun jugement sur la personne, seulement sur le travail. Ne transmettez jamais de nom complet ni de données sensibles.`},
+  {cat:'correction',title:'Rédiger un corrigé commenté',sub:'Un corrigé qui explique la démarche, pas seulement le résultat.',tip:'Collez aussi 2 ou 3 erreurs fréquentes de votre classe pour les intégrer au corrigé.',example:'Exercice 2 · Méthode en 3 étapes · Calcul détaillé · Encadré « Attention » : « 40 % des copies ont oublié de convertir les minutes en heures ».',body:`Rôle : enseignant qui corrige un devoir en classe entière.
+Mission : rédiger un corrigé commenté.
+
+Sujet :
+"""
+[coller le sujet]
+"""
+
+Erreurs fréquentes observées : [liste ou "à anticiper"]
+Niveau : [classe]
+
+Pour chaque question, produisez :
+1. La démarche attendue, étape par étape.
+2. La réponse rédigée comme un élève devrait l'écrire.
+3. Un encadré "Attention" sur l'erreur fréquente.
+4. Une question bonus pour aller plus loin.
+
+Contraintes : vérifiez chaque calcul, signalez toute ambiguïté du sujet, ton encourageant.`},
+  {cat:'correction',title:'Créer une banque de commentaires de copie',sub:'Des annotations réutilisables, précises et bienveillantes.',tip:'Enregistrez la banque dans un document : vous gagnerez du temps à chaque paquet de copies.',example:'« Introduction : votre problématique reformule le sujet, elle ne le questionne pas encore. Essayez de commencer par “Dans quelle mesure…”. »',body:`Rôle : correcteur expérimenté.
+Mission : créer une banque de commentaires pour un type de devoir.
+
+Entrées :
+- Type de devoir : [dissertation / problème / compte rendu / ...]
+- Niveau : [classe]
+- Critères de la grille : [liste]
+
+Pour chaque critère, produisez :
+1. 2 commentaires pour une réussite (ce qui est réussi et pourquoi).
+2. 3 commentaires pour une difficulté (constat + piste concrète).
+3. 1 commentaire pour une absence totale.
+
+Contraintes : chaque commentaire fait au plus 2 phrases, commence par un constat observable, finit par une action possible. Aucun commentaire sur la personne.`},
+  // ---- Communication ----
+  {cat:'communication',title:'Préparer une réunion parents-professeurs',sub:'Un fil conducteur pour 10 minutes utiles avec chaque famille.',tip:'Préparez une fiche par élève avec 2 faits positifs avant d’aborder les difficultés.',example:'Accueil (1′) · 2 réussites concrètes (2′) · 1 difficulté avec exemple (3′) · écoute de la famille (2′) · 1 engagement commun daté (2′).',body:`Rôle : enseignant qui prépare des rencontres avec les familles.
+Mission : préparer le déroulé d'un entretien de 10 minutes.
+
+Entrées :
+- Situation de l'élève (anonymisée) : [résultats, attitude, faits observés]
+- Objectif de la rencontre : [informer / alerter / féliciter / co-construire]
+
+Produisez :
+1. Un déroulé minuté en 5 temps.
+2. Une phrase d'ouverture chaleureuse.
+3. La formulation des points positifs, puis des difficultés, appuyée sur des faits.
+4. 3 questions ouvertes pour écouter la famille.
+5. Une proposition d'engagement commun, concrète et datée.
+
+Contraintes : langage simple, sans jargon pédagogique. Jamais de comparaison avec d'autres élèves.`},
+  {cat:'communication',title:'Rédiger un mot pour la direction ou l’équipe',sub:'Un message professionnel clair pour signaler, proposer ou demander.',tip:'Gardez une demande par message : c’est ce qui obtient une réponse rapide.',example:'Objet : « Proposition de sortie au musée, 3e B, 14 mars » · contexte (2 lignes) · objectif pédagogique · besoins (bus, 2 accompagnateurs) · réponse souhaitée avant le 20 février.',body:`Rôle : enseignant qui écrit à sa hiérarchie ou à ses collègues.
+Mission : rédiger un courriel professionnel.
+
+Entrées :
+- Destinataire : [direction / équipe / inspecteur / collègue]
+- Objet : [signalement / proposition / demande / information]
+- Faits ou projet : [à préciser]
+- Ce que j'attends : [décision / avis / moyens]
+- Échéance : [date]
+
+Produisez :
+1. Un objet de courriel précis.
+2. Un message de 10 lignes maximum : contexte, demande, justification, échéance.
+3. Une formule de politesse adaptée au destinataire.
+4. Une variante plus courte, pour une messagerie instantanée.
+
+Contraintes : ton factuel et courtois, une seule demande, aucune information confidentielle sur un élève.`},
+  {cat:'communication',title:'Annoncer un changement aux élèves',sub:'Nouvelle règle, nouveau calendrier, nouvel outil : expliquer pour faire adhérer.',tip:'Annoncez le « pourquoi » avant le « quoi » : l’adhésion est bien meilleure.',example:'« À partir de lundi, les devoirs seront rendus sur la plateforme. Pourquoi ? Pour vous rendre vos copies en 3 jours au lieu de 10. Voici comment faire en 3 étapes… »',body:`Rôle : enseignant qui annonce un changement à sa classe.
+Mission : rédiger une annonce claire et motivante.
+
+Entrées :
+- Le changement : [à préciser]
+- La raison : [à préciser]
+- Date d'application : [date]
+- Public : [classe / âge]
+
+Produisez :
+1. Une annonce orale de 1 minute (texte à dire).
+2. Une version écrite courte (affichage ou plateforme).
+3. Les 3 étapes concrètes pour les élèves.
+4. Les 4 questions que les élèves vont probablement poser, avec les réponses.
+
+Contraintes : commencer par le pourquoi, ton positif mais honnête, pas de menace.`},
+  // ---- Vérification ----
+  {cat:'verification',title:'Vérifier l’exactitude d’un contenu produit par l’IA',sub:'Un contrôle systématique avant de distribuer un support.',tip:'Faites vérifier dans une nouvelle conversation : l’IA défend moins ses propres erreurs.',example:'Tableau de 12 affirmations · 9 vérifiées ✅ · 2 imprécises ⚠️ (date, unité) · 1 fausse ❌ avec correction proposée et source à consulter.',body:`Rôle : relecteur scientifique exigeant.
+Mission : vérifier le contenu suivant avant que je le distribue.
+
+Contenu à vérifier :
+"""
+[coller le texte]
+"""
+
+Discipline et niveau : [à préciser]
+
+Produisez un tableau :
+1. Chaque affirmation factuelle (date, chiffre, définition, nom, formule).
+2. Statut : exacte / imprécise / fausse / invérifiable.
+3. La correction proposée si nécessaire.
+4. Le type de source fiable où je peux vérifier moi-même.
+
+Puis signalez : les simplifications abusives pour ce niveau et les formulations qui pourraient induire une erreur.
+
+Contraintes : en cas de doute, dites "à vérifier" plutôt que de trancher. N'inventez aucune référence.`},
+  {cat:'verification',title:'Contrôler les biais d’un support',sub:'Stéréotypes, représentations, exemples : un regard extérieur.',tip:'Utile aussi pour les manuels et les sujets d’examen déjà existants.',example:'Remarques : 5 personnages masculins sur 6 dans les exercices · tous les exemples de prix en euros · une formulation qui associe une région à la pauvreté · propositions de reformulation.',body:`Rôle : relecteur attentif à l'équité.
+Mission : repérer les biais du support suivant.
+
+Support :
+"""
+[coller le contenu]
+"""
+
+Public : [classe, contexte du pays]
+
+Analysez :
+1. La représentation des genres (rôles, métiers, prénoms).
+2. Les références culturelles (sont-elles proches des élèves ?).
+3. Les stéréotypes (régions, origines, handicaps, milieux sociaux).
+4. L'accessibilité du vocabulaire.
+
+Pour chaque problème : citation exacte, pourquoi c'est un biais, reformulation proposée.
+
+Contraintes : ne signalez que ce qui est réellement présent. Distinguez les vrais problèmes des simples suggestions.`},
+  {cat:'verification',title:'Tester la robustesse d’un devoir face à l’IA',sub:'Savoir si un devoir maison peut être fait entièrement par une IA.',tip:'Testez vous-même le devoir dans une IA avant de le donner : 5 minutes qui évitent bien des surprises.',example:'Verdict : la question 1 est faisable par l’IA à 100 % · les questions 3 et 4 exigent des données de la sortie de classe · suggestion : ajouter un carnet de bord daté.',body:`Rôle : expert en évaluation à l'ère de l'IA.
+Mission : évaluer si ce devoir peut être réalisé entièrement par une IA.
+
+Devoir :
+"""
+[coller la consigne]
+"""
+
+Niveau : [classe]
+
+Produisez :
+1. Pour chaque question, un niveau de risque (faible / moyen / élevé) et pourquoi.
+2. Les éléments qui ancrent le devoir dans l'expérience de l'élève (ou leur absence).
+3. 3 modifications concrètes pour rendre le devoir plus personnel : données de classe, choix justifiés, trace du processus, oral court.
+4. Une version révisée de la consigne.
+
+Contraintes : l'objectif n'est pas d'interdire l'IA mais d'évaluer le vrai travail de l'élève.`},
+  // ---- Différenciation ----
+  {cat:'differenciation',title:'Préparer des activités pour les élèves rapides',sub:'Des défis qui approfondissent au lieu d’occuper.',tip:'Gardez ces fiches dans une boîte « défis » en libre accès dans la classe.',example:'Défi n°2 : « Trouvez un nombre qui est à la fois multiple de 6 et de 15, inférieur à 100. Combien y en a-t-il ? Prouvez-le. » · indice caché au verso.',body:`Rôle : enseignant qui gère une classe hétérogène.
+Mission : créer 5 défis d'approfondissement.
+
+Entrées :
+- Notion en cours : [notion]
+- Niveau : [classe]
+
+Pour chaque défi :
+1. Un titre accrocheur.
+2. L'énoncé (court, ouvert, exigeant).
+3. Un indice à donner sur demande.
+4. La solution.
+5. Le lien avec la notion du cours.
+
+Contraintes : pas d'exercices "en plus du même type", mais des tâches qui demandent de raisonner, créer ou expliquer. Faisable en autonomie en 10 à 15 minutes.`},
+  {cat:'differenciation',title:'Préparer un tutorat entre pairs',sub:'Un élève explique, un autre apprend, les deux progressent.',tip:'Changez les binômes régulièrement et valorisez le rôle du tuteur.',example:'Fiche tuteur : « Ne donne pas la réponse. Pose ces 3 questions : Qu’est-ce qu’on cherche ? Qu’est-ce qu’on sait ? Quelle est la première étape ? » · fiche tutoré avec 3 exercices gradués.',body:`Rôle : enseignant qui organise l'entraide.
+Mission : préparer une séance de tutorat entre pairs de [durée] minutes.
+
+Entrées :
+- Notion : [notion]
+- Niveau : [classe]
+- Nombre de binômes : [N]
+
+Produisez :
+1. Une fiche pour le tuteur : posture, 3 questions-guides, ce qu'il ne doit pas faire.
+2. Une fiche pour le tutoré : 3 exercices gradués.
+3. Les critères pour former les binômes.
+4. Une mini-grille d'auto-bilan pour chacun des deux.
+5. Le rôle de l'enseignant pendant la séance.
+
+Contraintes : le tuteur guide, il ne fait pas à la place. Bienveillance explicite dans les consignes.`},
+  {cat:'differenciation',title:'Traduire et simplifier une consigne',sub:'Pour les élèves allophones ou en difficulté de lecture.',tip:'Gardez toujours la même structure de consigne : les élèves apprennent à la reconnaître.',example:'Consigne originale de 4 lignes → version en 3 étapes numérotées, verbes d’action en gras, pictogrammes · traduction en anglais et en fon, avec avertissement de relecture.',body:`Rôle : enseignant spécialisé en accessibilité.
+Mission : rendre une consigne accessible à tous.
+
+Consigne originale :
+"""
+[coller la consigne]
+"""
+
+Profil des élèves : [allophones (langue : ...) / difficulté de lecture / DYS]
+
+Produisez :
+1. Une version simplifiée en étapes numérotées (une action par étape).
+2. Les verbes d'action en gras et expliqués.
+3. Un exemple de ce qui est attendu.
+4. Si demandé, une traduction dans la langue indiquée.
+5. Des pictogrammes suggérés pour chaque étape.
+
+Contraintes : ne changez pas l'exigence de la tâche, seulement l'accès. Signalez que la traduction doit être relue par un locuteur.`},
+  // ---- Organisation ----
+  {cat:'organisation',title:'Organiser une sortie pédagogique',sub:'Du projet à la fiche d’autorisation, sans rien oublier.',tip:'Lancez la démarche administrative au moins 6 semaines à l’avance.',example:'Rétroplanning : J-45 accord direction · J-30 autorisations parentales · J-15 réservation transport · J-7 fiche d’activité élève · J+2 restitution en classe.',body:`Rôle : enseignant qui organise une sortie.
+Mission : préparer l'organisation complète.
+
+Entrées :
+- Lieu : [lieu]
+- Classe et effectif : [ ]
+- Date envisagée : [ ]
+- Lien avec le programme : [ ]
+- Budget disponible : [ ]
+
+Produisez :
+1. Un rétroplanning daté (de J-45 à J+7).
+2. La liste des autorisations et documents nécessaires.
+3. Un modèle de lettre aux familles.
+4. Une fiche d'activité pour les élèves pendant la sortie.
+5. Une check-list sécurité et le jour J.
+6. Une idée d'exploitation au retour en classe.
+
+Contraintes : à adapter au règlement de mon établissement, que je vérifierai.`},
+  {cat:'organisation',title:'Préparer un cours pour un remplaçant',sub:'Tout ce qu’il faut pour que la classe continue d’apprendre.',tip:'Gardez une pochette « remplacement » prête à l’avance dans votre casier.',example:'Fiche 1 page : où en est la classe · séance clé en main de 55 min · consignes de travail à projeter · élèves ressources · ce qu’il faut récupérer en fin d’heure.',body:`Rôle : enseignant qui s'absente.
+Mission : préparer un dossier de remplacement.
+
+Entrées :
+- Classe et niveau : [ ]
+- Où en est le cours : [dernier point vu]
+- Durée de l'absence : [ ]
+- Règles de fonctionnement de la classe : [ ]
+
+Produisez :
+1. Une fiche de synthèse d'une page pour le remplaçant.
+2. Une séance clé en main, autonome, avec consignes et corrigé.
+3. Un travail que les élèves peuvent faire même sans explication.
+4. Les points de vigilance (sans données sensibles sur les élèves).
+5. Ce que le remplaçant doit récupérer ou noter pour moi.
+
+Contraintes : aucune nouvelle notion difficile, consignes lisibles sans moi.`},
+  {cat:'organisation',title:'Optimiser ma semaine de travail',sub:'Répartir préparation, correction et réunions sans s’épuiser.',tip:'Soyez honnête sur le temps réel de correction : c’est souvent là que tout déborde.',example:'Semaine type : correction groupée mardi et jeudi soir (1 h 30) · préparation le mercredi après-midi · 1 soirée sans travail protégée · alerte : 3 paquets de copies la même semaine.',body:`Rôle : coach d'organisation pour enseignants.
+Mission : m'aider à organiser ma semaine.
+
+Entrées :
+- Mon emploi du temps de cours : [jours et heures]
+- Mes classes et paquets de copies prévus : [ ]
+- Réunions et obligations : [ ]
+- Mes contraintes personnelles : [ ]
+- Ce qui déborde actuellement : [ ]
+
+Produisez :
+1. Une semaine type avec des blocs dédiés (préparation, correction, administratif, repos).
+2. Les tâches à regrouper et celles à réduire.
+3. 3 astuces de gain de temps adaptées à ma situation.
+4. Un signal d'alerte pour repérer la surcharge.
+
+Contraintes : réaliste, au moins une plage de repos protégée par semaine.`},
+
+  // ============ ENGAGEMENT & ANIMATION ============
+  {cat:'engagement',title:'Inventer un jeu pédagogique',sub:'Réviser une notion par un jeu simple, sans matériel coûteux.',tip:'Testez la règle avec 2 collègues ou 2 élèves avant la séance.',example:'« Le marché des fractions » : chaque équipe reçoit des cartes-fractions et doit « acheter » des objets dont le prix est une somme exacte · 20 min · le premier à 1 entier gagne.',body:`Rôle : concepteur de jeux éducatifs.
+Mission : créer un jeu pour réviser une notion.
+
+Entrées :
+- Notion : [notion]
+- Niveau : [classe]
+- Effectif : [ ]
+- Durée : [minutes]
+- Matériel disponible : [papier, tableau, craie, téléphones ?]
+
+Produisez :
+1. Le nom du jeu et son principe en une phrase.
+2. Les règles, étape par étape.
+3. Le matériel à préparer (fabrication simple).
+4. 10 cartes ou questions prêtes à l'emploi.
+5. La façon de vérifier que les élèves ont appris en jouant.
+
+Contraintes : jouable avec un grand effectif, règles comprises en 2 minutes, compétition bienveillante.`},
+  {cat:'engagement',title:'Animer un débat argumenté en classe',sub:'Une question vive, des rôles, des règles : un vrai débat, pas un brouhaha.',tip:'Attribuez les positions au hasard : défendre un avis qu’on ne partage pas développe l’argumentation.',example:'Question : « Faut-il autoriser le téléphone au lycée ? » · 2 équipes + 3 juges · 4 phases (préparation, ouverture, échanges, conclusion) · grille des juges sur 3 critères.',body:`Rôle : animateur de débats éducatifs.
+Mission : préparer un débat argumenté de [durée] minutes.
+
+Entrées :
+- Thème : [thème lié au programme]
+- Niveau : [classe]
+- Effectif : [ ]
+
+Produisez :
+1. 3 questions de débat formulées de façon ouverte.
+2. Les rôles (pour, contre, juges, gardien du temps, secrétaire).
+3. Le déroulé minuté.
+4. Les règles de prise de parole.
+5. Une fiche de préparation pour chaque camp (3 arguments + exemples à chercher).
+6. Une grille d'évaluation pour les juges.
+
+Contraintes : thème adapté à l'âge, pas de sujet blessant pour un élève. Prévoir une synthèse finale par l'enseignant.`},
+  {cat:'engagement',title:'Créer une activité de démarrage de cours',sub:'5 minutes pour mettre la classe au travail dès la sonnerie.',tip:'Projetez l’activité au tableau avant l’entrée des élèves : le rituel s’installe vite.',example:'Lundi : « 3 mots, 1 phrase » · Mardi : calcul mystère · Mercredi : vrai ou faux de la semaine · Jeudi : image à commenter · Vendredi : question flash de révision.',body:`Rôle : enseignant qui installe des rituels.
+Mission : proposer 5 activités de démarrage de 5 minutes.
+
+Entrées :
+- Discipline : [matière]
+- Niveau : [classe]
+- Chapitre en cours : [ ]
+
+Pour chaque activité :
+1. Un nom de rituel.
+2. La consigne affichable au tableau.
+3. Un exemple prêt pour demain.
+4. La façon de corriger en 1 minute.
+5. Le lien avec le chapitre.
+
+Contraintes : sans matériel, faisable en silence et individuellement, réactivation de notions déjà vues.`},
+  {cat:'engagement',title:'Rendre un chapitre « aride » plus vivant',sub:'Histoires, défis et liens avec la vie réelle pour une notion difficile.',tip:'Demandez des exemples ancrés dans le pays et l’âge de vos élèves.',example:'Chapitre « Les unités de mesure » → enquête « Le mystère du sac de riz » · 3 indices à mesurer · un métier lié (commerçant, maçon) · défi final en équipe.',body:`Rôle : conseiller en motivation scolaire.
+Mission : rendre un chapitre plus engageant.
+
+Entrées :
+- Chapitre : [titre]
+- Ce qui ennuie ou bloque les élèves : [ ]
+- Niveau : [classe]
+- Contexte des élèves : [pays, ville, intérêts]
+
+Produisez :
+1. 3 accroches possibles (histoire, énigme, fait surprenant vérifiable).
+2. 3 liens avec la vie quotidienne ou des métiers.
+3. Une idée de fil rouge pour tout le chapitre (enquête, mission, projet).
+4. Une activité de clôture qui donne du sens.
+
+Contraintes : ne pas sacrifier le contenu au divertissement. Faits surprenants uniquement s'ils sont vérifiables, avec la mention "à vérifier".`},
+
+  // ============ VIE DE CLASSE ============
+  {cat:'classe',title:'Co-construire les règles de la classe',sub:'Des règles décidées ensemble sont mieux respectées.',tip:'Limitez-vous à 5 règles formulées positivement.',example:'Séance de 45 min : « Dans une classe idéale, je me sens… » · 5 règles votées (« On lève la main pour parler ») · affiche signée par tous · bilan prévu dans 1 mois.',body:`Rôle : enseignant qui démarre l'année.
+Mission : préparer une séance de co-construction des règles de classe.
+
+Entrées :
+- Niveau / âge : [classe]
+- Effectif : [ ]
+- Problèmes à prévenir : [bavardages, retards, téléphone...]
+
+Produisez :
+1. Le déroulé d'une séance de 45 minutes.
+2. Une question de départ qui fait réfléchir.
+3. Une méthode pour passer des idées aux règles (regroupement, vote).
+4. Des exemples de règles formulées positivement.
+5. Une proposition de conséquences justes et graduées.
+6. Un rituel de bilan mensuel.
+
+Contraintes : langage adapté à l'âge, règles compatibles avec le règlement intérieur.`},
+  {cat:'classe',title:'Gérer un conflit entre élèves',sub:'Une démarche de médiation calme et équitable.',tip:'Séparez d’abord, écoutez chacun, puis réunissez : jamais l’inverse.',example:'Script en 4 temps : chacun raconte sans être interrompu · reformulation par l’adulte · « Qu’est-ce qui t’aurait aidé ? » · accord écrit et vérifié une semaine après.',body:`Rôle : médiateur scolaire expérimenté.
+Mission : m'aider à gérer un conflit entre élèves.
+
+Situation (anonymisée) :
+"""
+[décrire les faits observés, sans interprétation]
+"""
+
+Âge des élèves : [ ]
+
+Produisez :
+1. Les gestes immédiats pour apaiser.
+2. Un script d'entretien individuel (questions ouvertes).
+3. Un script de médiation commune en 4 temps.
+4. Un modèle d'accord simple à faire signer.
+5. Les signaux qui imposent de passer le relais (harcèlement, violence, danger).
+
+Contraintes : neutralité, pas de jugement des personnes, respect des procédures de l'établissement.`},
+  {cat:'classe',title:'Prévenir le harcèlement en classe',sub:'Une séance de sensibilisation et des repères pour agir.',tip:'Rappelez à la fin les contacts et numéros d’aide en vigueur dans votre pays.',example:'Séance de 55 min : courte histoire à analyser · distinction conflit / harcèlement · rôle des témoins · boîte à messages anonyme · affiche « À qui parler ? ».',body:`Rôle : référent prévention du harcèlement.
+Mission : préparer une séance de sensibilisation.
+
+Entrées :
+- Âge / niveau : [ ]
+- Durée : [minutes]
+- Contexte : [préventif / suite à un incident]
+
+Produisez :
+1. Une courte histoire fictive à analyser en groupe.
+2. Une explication simple : conflit, moquerie, harcèlement (répétition, isolement, rapport de force).
+3. Une activité sur le rôle des témoins.
+4. Ce que l'élève peut faire et à qui parler.
+5. Ce que l'enseignant doit faire s'il reçoit une confidence.
+
+Contraintes : aucun élève réel désigné, ton sécurisant, vérifier les ressources officielles locales.`},
+  {cat:'classe',title:'Restaurer le calme dans une classe agitée',sub:'Des stratégies concrètes, sans crier ni punir collectivement.',tip:'Choisissez 2 stratégies seulement et tenez-les 3 semaines avant de juger.',example:'Plan : signal sonore de silence · consignes écrites au tableau · 3 minutes de travail individuel au début · placement repensé · valorisation du groupe qui démarre vite.',body:`Rôle : conseiller en gestion de classe.
+Mission : m'aider à retrouver un climat de travail.
+
+Situation :
+- Niveau / effectif : [ ]
+- Moments difficiles : [début de cours, transitions, fin d'heure...]
+- Ce que j'ai déjà essayé : [ ]
+- Ce qui fonctionne un peu : [ ]
+
+Produisez :
+1. Une analyse des causes probables.
+2. 6 stratégies concrètes, classées de la plus simple à la plus structurante.
+3. Un plan d'action sur 3 semaines.
+4. Ce qu'il faut dire et ne pas dire.
+5. Des indicateurs simples pour mesurer le progrès.
+
+Contraintes : stratégies respectueuses des élèves, sans punition collective. Signaler quand demander l'appui de l'équipe.`},
+
+  // ============ ÉDUQUER À L'IA ============
+  {cat:'ia',title:'Expliquer l’IA aux élèves simplement',sub:'Une séance d’initiation : ce que l’IA fait, ce qu’elle ne fait pas.',tip:'Faites une démonstration en direct où l’IA se trompe : c’est le moment le plus marquant.',example:'Séance de 50 min : « Devinez le mot suivant » (jeu) · l’IA prédit, elle ne sait pas · démonstration d’une erreur · 3 règles d’or affichées dans la classe.',body:`Rôle : formateur en culture numérique.
+Mission : préparer une séance d'initiation à l'IA générative.
+
+Entrées :
+- Âge / niveau : [ ]
+- Durée : [minutes]
+- Accès au numérique en classe : [aucun / vidéoprojecteur / ordinateurs]
+
+Produisez :
+1. Une activité d'accroche sans écran qui fait comprendre la prédiction de mots.
+2. Une explication en 5 phrases simples de ce qu'est une IA générative.
+3. 3 exemples de ce qu'elle fait bien et 3 de ce qu'elle fait mal.
+4. Une démonstration d'erreur à réaliser.
+5. 3 règles d'or pour bien l'utiliser.
+
+Contraintes : vocabulaire de l'âge, pas d'anthropomorphisme ("elle pense", "elle sait"), ni peur ni enthousiasme excessif.`},
+  {cat:'ia',title:'Apprendre aux élèves à vérifier une réponse d’IA',sub:'Un atelier d’esprit critique sur des réponses réelles.',tip:'Préparez à l’avance des réponses d’IA contenant de vraies erreurs de votre discipline.',example:'4 réponses d’IA distribuées · les groupes cherchent l’erreur · fiche méthode « 3 vérifications » : la source, la cohérence, le recoupement · mise en commun.',body:`Rôle : enseignant en éducation aux médias.
+Mission : concevoir un atelier "Vérifier une réponse d'IA".
+
+Entrées :
+- Discipline : [matière]
+- Niveau : [classe]
+- Durée : [minutes]
+
+Produisez :
+1. 4 questions à poser à une IA, liées au programme, susceptibles d'erreurs.
+2. Ce que je dois préparer (réponses à copier et vérifier moi-même).
+3. Une fiche méthode élève en 3 étapes de vérification.
+4. Le déroulé de l'atelier en groupes.
+5. Une trace écrite de conclusion.
+
+Contraintes : je vérifierai moi-même chaque erreur avant la séance. Aucune source inventée.`},
+  {cat:'ia',title:'Rédiger une charte d’usage de l’IA avec la classe',sub:'Ce qui est permis, ce qui ne l’est pas, et pourquoi.',tip:'Distinguez clairement « aide pour apprendre » et « faire à ma place ».',example:'Charte en 3 colonnes : ✅ Autorisé (expliquer une notion, s’entraîner) · ⚠️ À déclarer (reformuler un texte) · ❌ Interdit (rendre un devoir produit par l’IA) · signée en classe.',body:`Rôle : enseignant qui encadre l'usage de l'IA.
+Mission : préparer une charte d'usage de l'IA à construire avec la classe.
+
+Entrées :
+- Niveau : [classe]
+- Règles de l'établissement : [s'il y en a]
+- Types de travaux donnés : [devoirs maison, exposés, projets...]
+
+Produisez :
+1. Des situations concrètes à discuter en classe (8 cas).
+2. Une charte en 3 colonnes : autorisé / à déclarer / interdit.
+3. Pour chaque règle, la raison pédagogique.
+4. Un modèle de "déclaration d'usage" à joindre aux travaux.
+5. Les conséquences en cas de non-respect, graduées et éducatives.
+
+Contraintes : compatible avec le règlement de l'établissement, que je vérifierai. Langage de l'âge.`},
+  {cat:'ia',title:'Transformer l’IA en partenaire d’entraînement',sub:'Apprendre aux élèves à se faire interroger plutôt qu’à copier.',tip:'Montrez-le en classe une fois : beaucoup d’élèves ignorent cet usage.',example:'Prompt élève : « Pose-moi 5 questions sur la Révolution française, une par une, attends ma réponse et explique-moi mes erreurs sans donner la réponse tout de suite. »',body:`Rôle : enseignant qui forme à un usage intelligent de l'IA.
+Mission : créer des prompts que mes élèves utiliseront pour réviser.
+
+Entrées :
+- Discipline : [matière]
+- Niveau : [classe]
+- Chapitre à réviser : [ ]
+
+Produisez :
+1. 5 prompts courts que l'élève peut copier, par exemple :
+   - se faire interroger question par question ;
+   - se faire expliquer une notion autrement ;
+   - faire corriger sa propre réponse sans recevoir la solution.
+2. Pour chaque prompt, un exemple de bonne utilisation.
+3. Les limites à rappeler (erreurs possibles, vérifier dans le cours).
+4. Une fiche d'une page à distribuer.
+
+Contraintes : prompts simples, en français courant. L'IA doit faire réfléchir l'élève, pas faire à sa place.`},
+
+  // ============ DÉVELOPPEMENT PRO ============
+  {cat:'pro',title:'Analyser une séance après coup',sub:'Une réflexion guidée pour progresser séance après séance.',tip:'5 minutes juste après la séance valent mieux qu’une heure une semaine plus tard.',example:'Bilan : objectif atteint pour 70 % de la classe · l’activité 2 trop longue de 10 min · à garder : le travail en binôme · à changer : donner la consigne écrite.',body:`Rôle : conseiller pédagogique bienveillant.
+Mission : m'aider à analyser une séance que je viens de faire.
+
+Ma séance :
+- Objectif prévu : [ ]
+- Déroulé réel : [ ]
+- Ce qui a bien marché : [ ]
+- Ce qui a coincé : [ ]
+- Signes que les élèves ont appris (ou pas) : [ ]
+
+Produisez :
+1. 5 questions de réflexion pour aller plus loin que mes premières impressions.
+2. Une analyse des causes possibles de ce qui a coincé.
+3. 3 ajustements concrets pour la prochaine fois.
+4. Ce que je dois absolument garder.
+
+Contraintes : pas de jugement, pistes réalistes, fondées sur ce que je décris.`},
+  {cat:'pro',title:'Préparer une visite d’inspection ou de conseiller',sub:'Être serein et montrer son travail réel.',tip:'Préparez votre séance habituelle, en mieux : pas un spectacle.',example:'Dossier prêt : progression annuelle · fiche de la séance observée · 3 copies corrigées représentatives · cahier de textes à jour · 2 questions à poser au visiteur.',body:`Rôle : enseignant expérimenté qui accompagne un collègue.
+Mission : m'aider à préparer une visite d'inspection ou de conseiller pédagogique.
+
+Entrées :
+- Type de visite : [inspection / accompagnement / titularisation]
+- Classe observée : [ ]
+- Séance prévue : [ ]
+- Ce qui m'inquiète : [ ]
+
+Produisez :
+1. La liste des documents à préparer.
+2. Une fiche de préparation de séance claire (objectif, déroulé, évaluation).
+3. 8 questions que le visiteur pourrait poser, avec des pistes de réponse honnêtes.
+4. Comment présenter une difficulté rencontrée de façon constructive.
+5. 2 questions que je peux poser au visiteur pour progresser.
+
+Contraintes : à adapter aux textes officiels de mon pays, que je vérifierai.`},
+  {cat:'pro',title:'Faire une veille pédagogique efficace',sub:'Se tenir à jour sans y passer ses soirées.',tip:'L’IA peut proposer des pistes de recherche, mais vérifiez chaque source qu’elle cite.',example:'Plan de veille : 20 min par semaine · 3 sources fiables à suivre · 1 fiche de lecture type · 1 idée testée par mois · partage en salle des professeurs.',body:`Rôle : documentaliste en sciences de l'éducation.
+Mission : m'aider à organiser une veille pédagogique réaliste.
+
+Entrées :
+- Ma discipline et mon niveau : [ ]
+- Mes questions du moment : [motivation, évaluation, numérique...]
+- Temps disponible par semaine : [minutes]
+
+Produisez :
+1. Un plan de veille hebdomadaire réaliste.
+2. Les types de sources fiables à privilégier (sans inventer de titres ni d'auteurs).
+3. Des mots-clés de recherche pour mes questions.
+4. Un modèle de fiche de lecture en 5 rubriques.
+5. Une méthode pour tester une idée en classe et en garder la trace.
+
+Contraintes : n'inventez aucune référence. Si vous citez un auteur ou une étude, signalez qu'il faut la vérifier.`},
+  {cat:'pro',title:'Préparer une observation entre collègues',sub:'Se regarder enseigner pour progresser ensemble.',tip:'Fixez un seul focus d’observation : c’est ce qui rend le retour utile.',example:'Focus : « Les questions posées aux élèves » · grille de comptage (questions fermées / ouvertes, temps d’attente) · retour de 20 min : 1 force, 1 piste, 1 question.',body:`Rôle : formateur en développement professionnel.
+Mission : organiser une observation croisée entre deux enseignants.
+
+Entrées :
+- Discipline(s) et niveaux : [ ]
+- Ce que je veux améliorer : [ ]
+- Temps disponible : [ ]
+
+Produisez :
+1. 3 focus d'observation possibles, précis et observables.
+2. Une grille d'observation simple pour le focus choisi.
+3. Les règles de confiance entre collègues (confidentialité, bienveillance).
+4. Le déroulé de l'entretien de retour (20 minutes).
+5. Comment transformer le retour en un objectif concret.
+
+Contraintes : démarche entre pairs, sans évaluation hiérarchique.`},
 ];
+
+// Regroupe les prompts par catégorie, dans l'ordre des puces
+PROMPTS.sort((a,b)=>CATS.findIndex(c=>c.id===a.cat)-CATS.findIndex(c=>c.id===b.cat));
 
 const grid = document.getElementById('prompts-grid');
 const chips = document.getElementById('cat-chips');
@@ -889,8 +1590,16 @@ chips.innerHTML = CATS.map(c => {
 }).join('');
 
 // Prompt card rendering
-function renderPrompts(filter='all'){
-  const list = filter === 'all' ? PROMPTS : PROMPTS.filter(p=>p.cat===filter);
+const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let currentCat = 'all';
+document.querySelectorAll('[data-count]').forEach(el=>{
+  const k = el.dataset.count;
+  el.textContent = k==='prompts' ? PROMPTS.length : k==='others' ? PROMPTS.length-1 : CATS.length-1;
+});
+function renderPrompts(filter=currentCat){
+  currentCat = filter;
+  const q = norm(document.getElementById('prompt-search').value.trim());
+  const list = PROMPTS.filter(p => (filter==='all' || p.cat===filter) && (!q || norm(p.title+' '+p.sub+' '+p.body+' '+p.example).includes(q)));
   counter.textContent = list.length === PROMPTS.length ? `${list.length} prompts affichés` : `${list.length} / ${PROMPTS.length} prompts`;
   grid.innerHTML = list.map((p,i)=>{
     const realIdx = PROMPTS.indexOf(p);
@@ -916,10 +1625,11 @@ function renderPrompts(filter='all'){
         </button>
       </div>
     </article>`;
-  }).join('');
+  }).join('') || '<p class="prompts-empty">Aucun prompt ne correspond à cette recherche.</p>';
 }
 
 renderPrompts();
+document.getElementById('prompt-search').addEventListener('input', () => renderPrompts());
 
 chips.addEventListener('click', e => {
   const b = e.target.closest('.cat-chip');
