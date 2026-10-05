@@ -4,113 +4,169 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1a2847">
-<meta name="description" content="LE PROF · Ressources libres : prompts prêts à copier, checklists imprimables, modèles. Pour les enseignants qui gardent la main sur l'IA.">
-<meta property="og:title" content="LE PROF — Ressources libres pour les enseignants">
-<meta property="og:description" content="Prompts, checklists et modèles à télécharger, librement.">
+<meta name="description" content="LE PROF · 24 prompts prêts à copier, 3 checklists imprimables, modèles. Libres et classés par usage.">
+<meta property="og:title" content="LE PROF — 24 prompts libres pour les enseignants">
+<meta property="og:description" content="Prompts prêts à copier, avec exemples. Pour les enseignants qui veulent garder la main sur l'IA.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,0..100;1,9..144,400..600,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<title>LE PROF · Ressources</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..700,0..100&family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>LE PROF · 24 prompts libres pour enseignants</title>
 <style>
 :root{
   --navy:#1a2847;--navy-2:#243461;--navy-soft:#eef0f5;
-  --gold:#d4a056;--gold-soft:#f6ecd9;--gold-deep:#8a6324;
-  --teal:#2a7a68;--teal-soft:#e7f0ed;
+  --gold:#d4a056;--gold-2:#c48d3f;--gold-soft:#f6ecd9;--gold-deep:#8a6324;
+  --teal:#2a7a68;--teal-2:#216053;--teal-soft:#e7f0ed;
+  --coral:#c76f54;--coral-soft:#f8e9e2;
+  --plum:#6b4e8c;--plum-soft:#efeaf6;
   --ink:#1a2237;--body:#3b4252;--muted:#7a8094;
-  --cream:#f7f3ea;--cream-2:#faf6ee;--paper:#ffffff;--line:#e4e2d8;
+  --cream:#f7f3ea;--cream-2:#faf6ee;--paper:#fff;--line:#e4e2d8;
   --radius:14px;
-  --serif:'Fraunces','Playfair Display',Georgia,serif;
-  --sans:'Instrument Sans',-apple-system,'Segoe UI',Arial,sans-serif;
+  --serif:'Fraunces','Didot',Georgia,serif;
+  --sans:'Inter',-apple-system,'Segoe UI',Arial,sans-serif;
   --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;
   --shadow-sm:0 2px 10px #1a28470a;--shadow:0 8px 32px #1a28471a;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--cream-2);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,p{margin:0}
-h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);font-weight:600;letter-spacing:-.02em;font-variation-settings:"SOFT" 60,"opsz" 144}
-h1{font-size:clamp(38px,5.5vw,56px);line-height:1.05;font-weight:700;letter-spacing:-.035em;font-variation-settings:"SOFT" 50,"opsz" 144}
-h2{font-size:clamp(26px,3vw,36px);line-height:1.15;letter-spacing:-.025em}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);letter-spacing:-.02em;font-variation-settings:"SOFT" 60,"opsz" 144}
+h1{font-size:clamp(42px,6vw,66px);line-height:1.02;font-weight:700;letter-spacing:-.035em;font-variation-settings:"SOFT" 50,"opsz" 144}
+h2{font-size:clamp(28px,3.5vw,40px);line-height:1.1;font-weight:600;letter-spacing:-.025em}
 h3{font-size:19px;line-height:1.3;font-weight:600}
 h4{font-size:15px;font-weight:600}
 p{line-height:1.7}
 a{color:var(--teal);text-decoration:none;transition:color .15s}
 a:hover{color:var(--navy)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 .eyebrow{font-size:11px;letter-spacing:2.4px;font-weight:700;color:var(--teal);text-transform:uppercase}
-.eyebrow.gold{color:var(--gold)}
+.eyebrow.gold{color:var(--gold-deep)}
+.eyebrow.coral{color:var(--coral)}
 .gold-rule{width:52px;height:3px;background:var(--gold);display:block;border-radius:2px;margin:16px 0}
 .serif-italic{font-family:var(--serif);font-style:italic;font-weight:400}
 
+/* NAV */
 .nav{position:sticky;top:0;z-index:30;background:#faf6eecc;backdrop-filter:blur(14px);border-bottom:1px solid #e4e2d866}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1200px;margin:0 auto}
 .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);text-decoration:none;font-size:17px;letter-spacing:.8px}
 .brand-mark{width:36px;height:36px;background:var(--navy);border-radius:8px;display:grid;place-items:center}
 .brand-mark svg{width:22px;height:22px}
-.nav-links{display:flex;gap:28px;align-items:center;font-size:14px}
+.nav-links{display:flex;gap:24px;align-items:center;font-size:14px}
 .nav-links a{color:var(--body);font-weight:500}
 .nav-links a:hover,.nav-links a.active{color:var(--navy)}
-.nav-cta{background:var(--navy);color:#fff;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600}
-.nav-cta:hover{background:var(--navy-2);color:#fff}
+.nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;letter-spacing:.3px}
+.nav-cta:hover{background:var(--gold-2);color:var(--navy)}
 
-.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:all .15s;cursor:pointer;font-family:inherit}
-.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
-.btn.primary:hover{background:var(--navy-2);transform:translateY(-1px);box-shadow:var(--shadow)}
+/* BUTTONS — varied palette */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:all .18s;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+.btn.gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.btn.gold:hover{background:var(--gold-2);border-color:var(--gold-2)}
+.btn.navy{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn.navy:hover{background:var(--navy-2)}
+.btn.teal{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn.teal:hover{background:var(--teal-2)}
 .btn.outline{background:transparent;color:var(--navy);border-color:var(--navy)}
 .btn.outline:hover{background:var(--navy);color:#fff}
+.btn.outline-gold{background:transparent;color:var(--gold-deep);border-color:var(--gold)}
+.btn.outline-gold:hover{background:var(--gold);color:var(--navy)}
 .btn.small{padding:8px 14px;font-size:12px}
 .btn.ghost{background:transparent;color:var(--teal);border-color:transparent;padding-left:0}
-.btn.ghost:hover{color:var(--navy)}
+.btn.ghost:hover{color:var(--navy);transform:none;box-shadow:none}
 
-.hero{padding:60px 0 50px;text-align:center}
-.hero h1{margin:16px 0 16px}
-.hero .lead{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--navy);max-width:620px;margin:0 auto;line-height:1.5}
+/* HERO */
+.hero{padding:70px 0 50px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:60px;align-items:center}
+.hero-copy .eyebrow{margin-bottom:16px;display:block}
+.hero h1{margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--gold-deep);font-weight:400;font-variation-settings:"SOFT" 100,"opsz" 144}
+.hero .lead{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--navy);line-height:1.5;margin-bottom:28px;font-weight:400;max-width:580px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--line);max-width:540px}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-family:var(--serif);font-size:28px;color:var(--navy);font-weight:700;line-height:1;font-variation-settings:"SOFT" 50,"opsz" 144}
+.stat-lbl{font-size:11px;color:var(--muted);letter-spacing:1.4px;font-weight:600;text-transform:uppercase;margin-top:4px}
 
-.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:30px 0 50px}
-.tab{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:13px;color:var(--body);cursor:pointer;transition:all .15s;font-family:inherit}
-.tab:hover{border-color:var(--navy)}
-.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* HERO ILLUSTRATION */
+.hero-illus{background:var(--navy);border-radius:20px;padding:34px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-illus:before{content:'';position:absolute;top:-80px;right:-80px;width:220px;height:220px;background:radial-gradient(circle,#d4a05633,transparent 70%)}
+.hero-illus .ill-eyebrow{font-size:9px;letter-spacing:2.5px;color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:14px}
+.hero-illus .ill-title{font-family:var(--serif);font-size:26px;font-weight:600;line-height:1.15;margin-bottom:16px;letter-spacing:-.02em}
+.hero-illus .ill-sample{background:#ffffff10;border:1px solid #ffffff22;border-radius:10px;padding:16px;font-family:var(--mono);font-size:11.5px;line-height:1.6;color:#ffffffd0;max-height:160px;overflow:hidden;position:relative}
+.hero-illus .ill-sample:after{content:'';position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(to bottom,transparent,#1a2847)}
+.hero-illus .ill-tag{display:inline-block;margin-top:14px;font-size:10px;color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase}
 
-section{padding:60px 0}
+/* CATEGORIES */
+.cat-nav{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin:40px 0 30px;box-shadow:var(--shadow-sm)}
+.cat-nav-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px;flex-wrap:wrap}
+.cat-nav-head .eyebrow{display:inline-block}
+.cat-nav-head .counter{font-size:13px;color:var(--muted);font-weight:600}
+.cat-chips{display:flex;flex-wrap:wrap;gap:8px}
+.cat-chip{padding:9px 15px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:12.5px;color:var(--body);cursor:pointer;transition:all .15s;font-family:inherit;display:inline-flex;align-items:center;gap:7px}
+.cat-chip:hover{border-color:var(--navy)}
+.cat-chip.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cat-chip .dot{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.cat-chip.active .dot{background:var(--gold)}
+.cat-chip .count{font-size:10px;background:var(--navy-soft);padding:1px 6px;border-radius:5px;color:var(--muted);font-weight:700;margin-left:2px}
+.cat-chip.active .count{background:#ffffff22;color:#fff}
+
+/* SECTIONS */
+section{padding:50px 0}
 section.alt{background:var(--cream)}
-
-.section-head{text-align:center;margin-bottom:40px}
+.section-head{text-align:center;margin-bottom:36px}
 .section-head h2{margin-top:12px}
 .section-head .lead{font-size:16px;color:var(--muted);max-width:620px;margin:14px auto 0;line-height:1.6}
 .section-head .gold-rule{margin:18px auto}
 
 /* PROMPTS */
 .prompts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.prompt-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column;gap:14px}
+.prompt-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column;gap:14px;position:relative}
 .prompt-card:hover{border-color:var(--gold);box-shadow:var(--shadow-sm)}
 .prompt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
 .prompt-head .ptitle{flex:1}
 .prompt-head h3{margin-bottom:4px}
-.prompt-head p{font-size:13px;color:var(--muted);line-height:1.5}
-.prompt-tag{font-size:9px;letter-spacing:1.6px;font-weight:700;padding:4px 9px;border-radius:5px;text-transform:uppercase;background:var(--teal-soft);color:var(--teal);white-space:nowrap}
-.prompt-tag.cours{background:var(--teal-soft);color:var(--teal)}
-.prompt-tag.evaluation{background:#efeaf6;color:#6b4e8c}
-.prompt-tag.correction{background:var(--gold-soft);color:var(--gold-deep)}
-.prompt-tag.communication{background:#f5e6e9;color:#8c5261}
-.prompt-body{background:var(--cream-2);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-family:var(--mono);font-size:12.5px;line-height:1.65;color:#2d3645;white-space:pre-wrap;max-height:220px;overflow:auto}
-.prompt-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
-.prompt-foot .ptip{font-size:11px;color:var(--muted);font-style:italic;flex:1}
-.copy-btn{background:var(--navy);color:#fff;padding:8px 14px;border-radius:7px;font-size:12px;font-weight:600;border:0;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:6px;transition:background .15s}
-.copy-btn:hover{background:var(--navy-2)}
+.prompt-head .psub{font-size:13px;color:var(--muted);line-height:1.5}
+.prompt-tag{font-size:9px;letter-spacing:1.4px;font-weight:700;padding:5px 10px;border-radius:5px;text-transform:uppercase;white-space:nowrap}
+.prompt-tag.cat-cours{background:var(--teal-soft);color:var(--teal)}
+.prompt-tag.cat-supports{background:#eaf1f5;color:#5e8294}
+.prompt-tag.cat-evaluation{background:var(--plum-soft);color:var(--plum)}
+.prompt-tag.cat-correction{background:var(--gold-soft);color:var(--gold-deep)}
+.prompt-tag.cat-communication{background:var(--coral-soft);color:var(--coral)}
+.prompt-tag.cat-verification{background:#e5efe9;color:#466b4e}
+.prompt-tag.cat-differenciation{background:#f3eff8;color:#765999}
+.prompt-tag.cat-organisation{background:#f7f3e3;color:#8a7544}
+.prompt-body{background:var(--cream-2);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-family:var(--mono);font-size:12px;line-height:1.65;color:#2d3645;white-space:pre-wrap;max-height:200px;overflow:auto}
+.prompt-body::-webkit-scrollbar{width:7px}
+.prompt-body::-webkit-scrollbar-thumb{background:#c9c7bd;border-radius:4px}
+.prompt-example{background:#f6ecd922;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 15px;font-size:12.5px;color:#5e5240;line-height:1.6}
+.prompt-example strong{color:var(--gold-deep);font-weight:700;letter-spacing:.3px;font-size:10px;text-transform:uppercase;letter-spacing:1.3px;display:block;margin-bottom:5px;font-family:var(--sans)}
+.prompt-example em{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--navy)}
+.prompt-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:4px}
+.prompt-tip{font-size:11.5px;color:var(--muted);font-family:var(--serif);font-style:italic;flex:1;line-height:1.4}
+.copy-btn{background:var(--navy);color:#fff;padding:9px 15px;border-radius:7px;font-size:12px;font-weight:600;border:0;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:6px;transition:all .15s}
+.copy-btn:hover{background:var(--navy-2);transform:translateY(-1px)}
 .copy-btn.copied{background:var(--teal)}
 
 /* CHECKLISTS */
 .checklists-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .checklist-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:all .2s;position:relative}
-.checklist-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow)}
+.checklist-card:nth-child(1){border-top:4px solid var(--teal)}
+.checklist-card:nth-child(2){border-top:4px solid var(--gold)}
+.checklist-card:nth-child(3){border-top:4px solid var(--coral)}
+.checklist-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
 .checklist-icon{width:46px;height:46px;background:var(--navy);color:var(--gold);border-radius:11px;display:grid;place-items:center;font-family:var(--serif);font-size:19px;font-weight:700;margin-bottom:16px}
+.checklist-card:nth-child(1) .checklist-icon{background:var(--teal);color:#fff}
+.checklist-card:nth-child(2) .checklist-icon{background:var(--gold);color:var(--navy)}
+.checklist-card:nth-child(3) .checklist-icon{background:var(--coral);color:#fff}
 .checklist-card h3{margin-bottom:8px}
-.checklist-card p{font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+.checklist-card .psub{font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.6}
 .checklist-list{list-style:none;padding:0;margin:0 0 22px}
 .checklist-list li{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.55;color:var(--body);padding:5px 0}
 .checklist-list li svg{color:var(--gold);flex-shrink:0;margin-top:2px}
+.checklist-card:nth-child(1) .checklist-list li svg{color:var(--teal)}
+.checklist-card:nth-child(3) .checklist-list li svg{color:var(--coral)}
 .checklist-print{display:inline-flex;align-items:center;gap:7px;color:var(--teal);font-weight:600;font-size:13px;cursor:pointer;background:transparent;border:0;padding:0;font-family:inherit}
 .checklist-print:hover{color:var(--navy)}
 
@@ -120,14 +176,14 @@ section.alt{background:var(--cream)}
 .model-row:hover{border-color:var(--gold)}
 .model-ext{width:48px;height:52px;background:var(--navy);color:var(--gold);border-radius:7px;display:grid;place-items:center;font-size:10px;font-weight:700;letter-spacing:.5px;font-family:var(--mono);flex-shrink:0}
 .model-info{flex:1}
-.model-info h4{font-size:15px;font-family:var(--serif);color:var(--navy);margin-bottom:3px}
+.model-info h4{font-size:15px;color:var(--navy);margin-bottom:3px}
 .model-info p{font-size:12px;color:var(--muted);margin:0}
-.model-row .btn{flex-shrink:0}
 
 /* COMING */
-.coming{background:var(--cream);border:1px dashed var(--line);border-radius:12px;padding:28px 32px;margin-top:40px;text-align:center}
-.coming h3{margin-bottom:8px}
-.coming p{color:var(--muted);font-size:14px;max-width:520px;margin:0 auto 16px}
+.coming{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;border-radius:16px;padding:40px 36px;margin-top:50px;text-align:center;position:relative;overflow:hidden}
+.coming:before{content:'';position:absolute;top:-100px;right:-100px;width:280px;height:280px;background:radial-gradient(circle,#d4a05622,transparent 70%)}
+.coming h3{color:#fff;margin-bottom:10px;font-size:26px}
+.coming p{color:#ffffffb3;max-width:540px;margin:0 auto 24px;font-size:15px}
 
 /* FOOTER */
 footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px}
@@ -138,22 +194,27 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
 .footer-sub{text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid #ffffff1a;color:#ffffff80;font-size:12px}
 
 /* TOAST */
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow);opacity:0;transition:all .3s;z-index:100}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--teal);color:#fff;padding:12px 22px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow);opacity:0;transition:all .3s;z-index:100}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+.hidden{display:none!important}
+
 @media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
   .prompts-grid,.checklists-grid,.models-grid{grid-template-columns:1fr}
   .nav-links a:not(.nav-cta):not(.active){display:none}
 }
 @media(max-width:560px){
-  section{padding:44px 0}
+  section{padding:40px 0}
   .wrap{padding:0 20px}
   .prompt-body{font-size:11.5px}
+  .hero{padding:40px 0 30px}
+  .hero-stats{gap:20px}
+  .cat-nav{padding:16px}
 }
 @media print{
-  .nav,footer,.tabs,.hero,.checklists-grid > div:not(.print-target){display:none!important}
+  .nav,footer,.cat-nav,.hero,.coming,.toast{display:none!important}
   body{background:#fff}
-  .checklist-card{box-shadow:none;border:none;page-break-inside:avoid}
 }
 </style>
 </head>
@@ -168,35 +229,74 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
       <span>LE PROF</span>
     </a>
     <div class="nav-links">
-      <a href="index.html#chapitres">Le livre</a>
-      <a href="index.html#atelier">L'atelier</a>
+      <a href="index.html">L'atelier</a>
+      <a href="presentation.html">Présentation</a>
       <a href="ressources.html" class="active">Ressources</a>
-      <a class="nav-cta" href="livre/le-prof.pdf" download>Télécharger</a>
+      <a class="nav-cta" href="livre/le-prof.pdf" download>Télécharger le livre</a>
     </div>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow gold">Bibliothèque libre</div>
-    <h1>Des ressources prêtes à l'emploi.</h1>
-    <p class="lead">Prompts, checklists et modèles pour les enseignants qui veulent garder la main sur l'IA. Libres, gratuits, à utiliser dans votre contexte.</p>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow gold">Bibliothèque libre</span>
+        <h1>Des prompts qui tiennent <em>vraiment</em> en classe.</h1>
+        <p class="lead">24 prompts prêts à copier, 8 catégories, un exemple de résultat pour chacun. Pour les enseignants qui veulent gagner du temps sans y perdre leur jugement.</p>
+        <div class="hero-ctas">
+          <a class="btn gold" href="#prompts">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            Parcourir les prompts
+          </a>
+          <a class="btn outline-gold" href="livre/le-prof.pdf" download>
+            Télécharger le livre
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">24</span><span class="stat-lbl">Prompts</span></div>
+          <div class="stat"><span class="stat-num">8</span><span class="stat-lbl">Catégories</span></div>
+          <div class="stat"><span class="stat-num">3</span><span class="stat-lbl">Checklists</span></div>
+          <div class="stat"><span class="stat-num">0 €</span><span class="stat-lbl">Toujours</span></div>
+        </div>
+      </div>
+      <aside class="hero-illus" aria-hidden="true">
+        <div class="ill-eyebrow">Aperçu · Prompt n°3</div>
+        <div class="ill-title">Composer un sujet d'examen robuste à l'IA</div>
+        <pre class="ill-sample">Rôle : concepteur d'évaluation.
+Mission : composer un sujet qui exige
+du jugement, pas de la restitution.
+
+Cadre :
+- Discipline : [matière]
+- Niveau : [public]
+- Durée : [minutes]
+- Thème : [thème précis]
+
+Structure attendue en 3 parties :
+Partie 1 — Comprendre et sélectionner
+Partie 2 — Analyser et justifier
+Partie 3 — Transférer et discuter...</pre>
+        <span class="ill-tag">+ 23 autres prompts similaires ↓</span>
+      </aside>
+    </div>
   </div>
 </section>
 
-<!-- PROMPTS -->
+<!-- CATEGORIES + PROMPTS -->
 <section id="prompts">
   <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">1 · Prompts contextualisés</div>
-      <h2>12 prompts prêts à copier</h2>
-      <span class="gold-rule"></span>
-      <p class="lead">À utiliser dans votre outil IA habituel. Chaque prompt porte un cadre : rôle, objectif, contraintes et format attendu. Remplacez les crochets <code style="background:var(--navy-soft);padding:1px 5px;border-radius:3px;font-size:13px">[…]</code> par votre contexte.</p>
+    <div class="cat-nav">
+      <div class="cat-nav-head">
+        <span class="eyebrow">1 · Prompts contextualisés</span>
+        <span class="counter" id="counter">24 prompts affichés</span>
+      </div>
+      <div class="cat-chips" id="cat-chips">
+        <!-- Injected -->
+      </div>
     </div>
-
-    <div class="prompts-grid" id="prompts-grid">
-      <!-- Cards injected by JS -->
-    </div>
+    <div class="prompts-grid" id="prompts-grid"></div>
   </div>
 </section>
 
@@ -204,7 +304,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
 <section class="alt" id="checklists">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">2 · Checklists imprimables</div>
+      <div class="eyebrow coral">2 · Checklists imprimables</div>
       <h2>Pour relire, décider, cadrer</h2>
       <span class="gold-rule"></span>
       <p class="lead">Trois fiches A4 à imprimer ou à garder ouvertes. Elles ne décident pas à votre place : elles vous rappellent ce qu'il faut regarder.</p>
@@ -215,7 +315,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
       <article class="checklist-card">
         <div class="checklist-icon">01</div>
         <h3>Avant de confier un sujet à l'IA</h3>
-        <p>10 questions pour ne pas déléguer ce qui est à vous.</p>
+        <p class="psub">10 questions pour ne pas déléguer ce qui est à vous.</p>
         <ul class="checklist-list">
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ai-je formulé l'objectif d'apprentissage ?</span></li>
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Qui sont les étudiants visés ? Quel niveau réel ?</span></li>
@@ -228,16 +328,13 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Comment je vérifierai la fiabilité du résultat ?</span></li>
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quelle décision reste pour moi, non négociable ?</span></li>
         </ul>
-        <button class="checklist-print" data-print="01">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          Imprimer / PDF
-        </button>
+        <button class="checklist-print" data-print="01"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Imprimer / PDF</button>
       </article>
 
       <article class="checklist-card">
         <div class="checklist-icon">02</div>
         <h3>Examen robuste à l'IA</h3>
-        <p>Les 7 vérifications avant diffusion d'une épreuve.</p>
+        <p class="psub">Les 7 vérifications avant diffusion d'une épreuve.</p>
         <ul class="checklist-list">
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Contextualisation : données ou cas spécifiques, non génériques.</span></li>
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Transfert : la réponse exige d'appliquer à une situation nouvelle.</span></li>
@@ -247,16 +344,13 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Clause d'usage de l'IA explicite, cohérente avec l'épreuve.</span></li>
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Test en autonomie IA : j'ai essayé — ça ne passe pas tel quel.</span></li>
         </ul>
-        <button class="checklist-print" data-print="02">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          Imprimer / PDF
-        </button>
+        <button class="checklist-print" data-print="02"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Imprimer / PDF</button>
       </article>
 
       <article class="checklist-card">
         <div class="checklist-icon">03</div>
         <h3>Relecture d'une production IA</h3>
-        <p>7 points pour relire sans se faire avoir.</p>
+        <p class="psub">7 points pour relire sans se faire avoir.</p>
         <ul class="checklist-list">
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Exactitude factuelle — chaque chiffre, nom, date vérifiable.</span></li>
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Références — existent et disent ce qui est annoncé (sinon : hallucination).</span></li>
@@ -266,10 +360,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Biais — stéréotypes, culture dominante, exemples non pertinents.</span></li>
           <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Confidentialité — rien transmis que vous n'auriez partagé publiquement.</span></li>
         </ul>
-        <button class="checklist-print" data-print="03">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-          Imprimer / PDF
-        </button>
+        <button class="checklist-print" data-print="03"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Imprimer / PDF</button>
       </article>
 
     </div>
@@ -277,54 +368,43 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
 </section>
 
 <!-- MODELES -->
-<section id="modeles">
+<section>
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">3 · Modèles à venir</div>
-      <h2>Des gabarits prêts à adapter</h2>
+      <div class="eyebrow gold">3 · Modèles à adapter</div>
+      <h2>Dans l'atelier directement</h2>
       <span class="gold-rule"></span>
-      <p class="lead">Les modèles Word et PDF sont en préparation. En attendant, l'atelier LE PROF produit déjà ces trames directement en ligne.</p>
+      <p class="lead">Les gabarits sont produits sur mesure dans l'atelier LE PROF — vous entrez votre contexte, la trame s'ajuste.</p>
     </div>
 
     <div class="models-grid">
       <div class="model-row">
         <div class="model-ext">RUBRIC</div>
-        <div class="model-info">
-          <h4>Grille de correction type</h4>
-          <p>Critères, pondérations, descripteurs à adapter.</p>
-        </div>
+        <div class="model-info"><h4>Grille de correction type</h4><p>Critères, pondérations, descripteurs à adapter.</p></div>
         <a class="btn small outline" href="index.html#/studio/correction">Dans l'atelier</a>
       </div>
       <div class="model-row">
         <div class="model-ext">FICHE</div>
-        <div class="model-info">
-          <h4>Fiche de séance alignée</h4>
-          <p>Objectif → activité → preuve → feedback.</p>
-        </div>
+        <div class="model-info"><h4>Fiche de séance alignée</h4><p>Objectif → activité → preuve → feedback.</p></div>
         <a class="btn small outline" href="index.html#/studio/cours">Dans l'atelier</a>
       </div>
       <div class="model-row">
         <div class="model-ext">MAIL</div>
-        <div class="model-info">
-          <h4>Courriels-type aux étudiants</h4>
-          <p>Rappel, consigne IA, feedback collectif.</p>
-        </div>
+        <div class="model-info"><h4>Courriels-type aux étudiants</h4><p>Rappel, consigne IA, feedback collectif.</p></div>
         <a class="btn small outline" href="index.html#/studio/communication">Dans l'atelier</a>
       </div>
       <div class="model-row">
         <div class="model-ext">CLAUSE</div>
-        <div class="model-info">
-          <h4>Clause d'usage de l'IA (syllabus)</h4>
-          <p>Projet de clause à valider institutionnellement.</p>
-        </div>
+        <div class="model-info"><h4>Clause d'usage de l'IA (syllabus)</h4><p>Projet de clause à valider institutionnellement.</p></div>
         <a class="btn small outline" href="index.html#/studio/verification">Dans l'atelier</a>
       </div>
     </div>
 
     <div class="coming">
-      <h3>Et bientôt…</h3>
-      <p>Un extrait offert d'un chapitre, un glossaire IA-pédagogie FR/EN, et les modèles téléchargeables en Word + PDF. Suivez le repo <a href="https://github.com/oscarkakpo-create/LEPROF" target="_blank" rel="noopener">GitHub</a> pour être au courant.</p>
-      <a class="btn primary" href="livre/le-prof.pdf" download>
+      <div class="eyebrow gold">La suite arrive</div>
+      <h3>Un extrait de chapitre, un glossaire FR/EN, les modèles téléchargeables…</h3>
+      <p>En attendant, le livre complet est déjà là, et l'atelier produit déjà la plupart des trames en ligne.</p>
+      <a class="btn gold" href="livre/le-prof.pdf" download>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Télécharger le livre
       </a>
@@ -337,10 +417,10 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
     <div class="footer-grid">
       <div class="footer-brand">LE PROF · L'intelligence pédagogique derrière l'IA</div>
       <div class="footer-links">
-        <a href="index.html">Accueil</a>
-        <a href="livre/le-prof.pdf" download>Le livre</a>
         <a href="index.html">L'atelier</a>
-        <a href="https://github.com/oscarkakpo-create/LEPROF" target="_blank" rel="noopener">GitHub</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="livre/le-prof.pdf" download>Le livre</a>
+        <a href="https://github.com/oscarkakpo-create/github/LEPROF" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <div class="footer-sub">© 2026 Oscar Kakpo · Ressources libres sous usage pédagogique</div>
@@ -350,8 +430,21 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
 <div class="toast" id="toast">Prompt copié ✓</div>
 
 <script>
+const CATS = [
+  {id:'all', label:'Tous', emoji:''},
+  {id:'cours', label:'Préparation', emoji:'📘'},
+  {id:'supports', label:'Supports', emoji:'🎞️'},
+  {id:'evaluation', label:'Évaluation', emoji:'📝'},
+  {id:'correction', label:'Correction', emoji:'✍️'},
+  {id:'communication', label:'Communication', emoji:'💬'},
+  {id:'verification', label:'Vérification', emoji:'🛡️'},
+  {id:'differenciation', label:'Différenciation', emoji:'🧩'},
+  {id:'organisation', label:'Organisation', emoji:'📅'}
+];
+
 const PROMPTS = [
-  {tag:'cours',tagLabel:'Cours',title:'Formuler un objectif observable',subtitle:'À partir d’une notion, un objectif pédagogique mesurable.',tip:'Utilisez le verbe de Bloom qui correspond à votre niveau visé.',body:`Rôle : vous êtes mon assistant pédagogique.
+  // ============ PRÉPARATION DE COURS ============
+  {cat:'cours',title:'Formuler un objectif observable',sub:'À partir d’une notion, un objectif aligné sur Bloom.',tip:'Utilisez le verbe de Bloom qui correspond à votre niveau visé.',example:'« À l’issue de la séance, l’étudiant sera capable de <em>comparer</em> deux hypothèses économiques, à partir d’un cas chiffré, en justifiant chaque étape par une donnée. »',body:`Rôle : vous êtes mon assistant pédagogique.
 Objectif : m'aider à formuler un objectif d'apprentissage observable, aligné sur la taxonomie de Bloom.
 
 Contexte :
@@ -367,12 +460,12 @@ Produisez :
 4. Un critère de réussite non ambigu.
 
 Contraintes : pas de verbes vagues (comprendre, connaître, savoir). Pas d'invention de références.`},
-  {tag:'cours',tagLabel:'Cours',title:'Structurer une séance (90 min)',subtitle:'Un déroulé aligné objectif → activité → preuve → feedback.',tip:'Précisez le minutage et les prérequis pour un résultat utilisable tel quel.',body:`Rôle : ingénieur pédagogique.
+  {cat:'cours',title:'Structurer une séance (90 min)',sub:'Un déroulé aligné objectif → activité → preuve → feedback.',tip:'Précisez le minutage et les prérequis pour un résultat utilisable tel quel.',example:'Un plan en 6 étapes minutées (10′ activation / 20′ apport / 25′ activité / 15′ mise en commun / 10′ vérification / 10′ transfert) + matériel à préparer.',body:`Rôle : ingénieur pédagogique.
 Mission : me proposer un déroulé de séance de [durée] minutes.
 
 Entrées :
 - Objectif d'apprentissage : [objectif observable]
-- Public : [niveau, effectif, modalité présentiel/distanciel]
+- Public : [niveau, effectif, modalité]
 - Prérequis : [acquis supposés]
 - Contenu de référence : [notion / document source]
 
@@ -386,71 +479,26 @@ Produisez un déroulé en 6 étapes :
 
 Pour chaque étape : minute approximative, matériel, interaction attendue.
 Finissez par : "Ce qui est à préparer avant la séance".`},
-  {tag:'evaluation',tagLabel:'Évaluation',title:'Composer un sujet d’examen robuste à l’IA',subtitle:'Trois parties : comprendre, analyser, transférer.',tip:'Contextualisez avec un cas spécifique à votre domaine (données, acteurs, contraintes).',body:`Rôle : concepteur d'évaluation.
-Mission : composer un sujet d'examen qui exige du jugement, pas de la restitution.
-
-Cadre :
-- Discipline : [matière]
-- Niveau : [public]
-- Durée : [minutes]
-- Thème : [thème précis du cours]
-- Documents fournis à l'étudiant : [liste ou "aucun"]
-
-Structure attendue en 3 parties :
-Partie 1 — Comprendre et sélectionner (ancrée dans un cas précis fourni).
-Partie 2 — Analyser et justifier (démarche explicite, étapes attendues).
-Partie 3 — Transférer et discuter (variation du contexte, limites).
-
-Pour chaque partie : énoncé, preuve attendue, barème indicatif, critères de réussite.
-
-Contraintes : contextualisation obligatoire (données ou cas spécifiques), pas de question-type générique restitutive, références au cours vérifiables.`},
-  {tag:'evaluation',tagLabel:'Évaluation',title:'Générer un QCM avec distracteurs plausibles',subtitle:'Questions à choix unique avec feedback par option.',tip:'Donnez des exemples de confusions fréquentes de vos étudiants : les distracteurs seront plus fins.',body:`Rôle : concepteur de QCM.
-Mission : produire [N] questions à choix unique sur [notion], niveau [niveau Bloom].
-
-Exigences par question :
-- Énoncé clair et contextualisé, pas de piège de formulation.
-- 1 bonne réponse + 3 distracteurs plausibles (représentant chacun une confusion typique).
-- Feedback par option : pourquoi elle est juste ou fausse, et comment progresser.
-- Référence au contenu source (passage précis).
-
-Contrôles finaux à mentionner :
-- Aucune réponse défendable en double.
-- Pas d'indice involontaire (longueur, formulation, mot absolu).
-- Les distracteurs correspondent à des erreurs réellement observées en classe.
-
-Format de sortie : JSON structuré (question, options avec correct:true/false, feedback, source).`},
-  {tag:'correction',tagLabel:'Correction',title:'Rédiger un feedback bienveillant structuré',subtitle:'Trois temps : appui, observation, prochaine étape.',tip:'Appuyez le feedback sur une trace observable de la production, pas sur une impression.',body:`Rôle : enseignant qui rédige un feedback formatif.
-Mission : m'aider à rédiger un feedback structuré pour un étudiant.
+  {cat:'cours',title:'Décliner un syllabus en séances',sub:'D’un programme condensé à un semestre détaillé.',tip:'Précisez le volume horaire total et les contraintes de calendrier.',example:'Un tableau semaine par semaine : notion → objectif → activité → évaluation formative, avec charge estimée par séance et jalons de validation.',body:`Rôle : coordinateur pédagogique expérimenté.
+Mission : décliner un syllabus en séances concrètes sur [N] semaines.
 
 Entrées :
-- Production de l'étudiant : [coller ou décrire]
-- Critères d'évaluation : [liste]
-- Point d'appui identifié : [acquis observable]
-- Point à travailler : [constat précis sur la production]
-
-Produisez un feedback en 3 temps :
-1. POINT D'APPUI — reconnaître ce qui fonctionne, de façon spécifique.
-2. OBSERVATION — nommer ce qui pose problème, sur la production (pas sur la personne).
-3. PROCHAINE ÉTAPE — proposer une action réalisable, avec un critère de réussite clair.
-
-Contraintes : ton bienveillant mais honnête, pas de jugement sur la personne, pas de "il faut" injonctif, pas de superlatifs vides ("excellent travail").`},
-  {tag:'correction',tagLabel:'Correction',title:'Construire une grille de correction',subtitle:'Critères, pondérations, descripteurs par niveau.',tip:'4 à 6 critères maximum pour rester actionnable à la correction.',body:`Rôle : spécialiste évaluation pédagogique.
-Mission : construire une grille de correction (rubrique) pour une production étudiante.
-
-Contexte :
-- Production évaluée : [type : rapport, oral, dossier…]
-- Objectif pédagogique visé : [objectif]
+- Discipline : [matière]
 - Niveau : [public]
-- Barème total : [sur 20 / sur 100 / …]
+- Volume horaire total : [heures]
+- Nombre de séances : [N]
+- Compétences visées : [liste]
+- Contraintes (jours fériés, périodes d'examen) : [à préciser]
 
-Produisez une rubrique avec 4 à 6 critères. Pour chaque critère :
-- Nom court et clair
-- Pondération en points
-- Descripteur général (en 1 phrase)
-- 4 niveaux de maîtrise avec descripteur observable (Insuffisant / En progrès / Satisfaisant / Excellent)
+Produisez :
+1. Un tableau semaine par semaine : thème, objectif, activité principale, évaluation formative, charge estimée (heures de travail étudiant).
+2. 2 à 3 jalons de validation sur le semestre.
+3. Les pré-requis à vérifier avant chaque chapitre critique.
+4. Signaler les semaines à risque (densité trop forte).
 
-Contraintes : chaque descripteur doit être observable (pas "montre de la rigueur" mais "cite une référence précise par argument"). Pondérations cohérentes avec l'objectif.`},
-  {tag:'cours',tagLabel:'Cours',title:'Transformer un support en storyboard de slides',subtitle:'10 à 12 slides avec idée centrale et interaction par slide.',tip:'Fournissez le document source : la trame s’appuiera dessus plutôt que d’inventer.',body:`Rôle : scénariste pédagogique.
+Contraintes : charge totale cohérente avec les ECTS, progression logique, alternance apport/activité.`},
+  // ============ SUPPORTS PÉDAGOGIQUES ============
+  {cat:'supports',title:'Transformer un support en storyboard de slides',sub:'10 à 12 slides avec idée centrale et interaction par slide.',tip:'Fournissez le document source : la trame s’appuiera dessus plutôt que d’inventer.',example:'Slide 3 — "Deux conceptions du marché" · Idée : les hypothèses conditionnent la lecture · Points : A, B, C · Illustration : schéma comparatif · Interaction : vote rapide "quelle lecture correspond au cas ?"',body:`Rôle : scénariste pédagogique.
 Mission : transformer le contenu suivant en un storyboard de [10-12] slides pour une séance de [durée].
 
 Contenu source :
@@ -462,34 +510,84 @@ Pour chaque slide produisez :
 - Numéro + titre court
 - Idée centrale (1 phrase)
 - Points-clés (3 maximum)
-- Illustration suggérée (schéma / image / rien)
-- Interaction prévue (question au public / mini-exercice / pause réflexion)
+- Illustration suggérée
+- Interaction prévue (question / mini-exercice / pause réflexion)
 - Transition vers la slide suivante
 
 Structure attendue : problème → objectif → notions → exemple → mise en activité → synthèse → vérification.
 
-Contraintes : pas de slide-texte, pas plus de 3 points-clés par slide, prévoir au moins 3 pauses actives.`},
-  {tag:'communication',tagLabel:'Communication',title:'Courriel aux étudiants (rappel + consigne)',subtitle:'Un message calibré selon le ton choisi.',tip:'Changez le ton pour vous mettre à l’aise : bienveillant, formel, direct.',body:`Rôle : enseignant qui s'adresse à ses étudiants.
-Mission : rédiger un courriel pour [objet du message].
+Contraintes : pas de slide-texte, pas plus de 3 points-clés par slide, au moins 3 pauses actives.`},
+  {cat:'supports',title:'Écrire un script vidéo court (3 à 5 min)',sub:'Pour une capsule pédagogique autonome.',tip:'Précisez le niveau et le point de blocage que vous visez.',example:'Ouverture : « Pourquoi ce calcul paraît juste alors qu’il est faux ? » · Promesse : repérer l’erreur en 3 min · Exemple chiffré · Pause active · Synthèse en 3 points · Appel à l’essai à faire.',body:`Rôle : réalisateur de capsules pédagogiques.
+Mission : écrire un script pour une capsule de [3-5] minutes.
 
-Paramètres :
-- Public : [L1 / M2 / groupe précis]
-- Ton : [bienveillant / formel / direct]
-- Action attendue : [ce que l'étudiant doit faire]
-- Échéance : [date / heure]
-- Signature : [nom, fonction]
+Contexte :
+- Notion : [notion précise]
+- Public : [niveau]
+- Point de blocage visé : [confusion fréquente à lever]
+- Modalité : [face caméra / voix off avec slides / tableau blanc animé]
 
-Structure :
-- Objet clair (max 60 caractères)
-- Salutation adaptée au ton
-- Contexte en 1-2 phrases
-- Action attendue en liste si plusieurs étapes
-- Échéance mise en évidence
-- Phrase de clôture bienveillante
-- Signature
+Produisez un script structuré :
+1. OUVERTURE (10-15 s) — accroche concrète, question-problème.
+2. PROMESSE D'APPRENTISSAGE (10 s) — action observable à l'issue.
+3. EXPLICATION (90 s) — notion essentielle, un seul angle.
+4. EXEMPLE (60 s) — données vérifiables.
+5. PAUSE ACTIVE (15 s) — question ou mini-manipulation.
+6. SYNTHÈSE (30 s) — 3 messages à retenir.
+7. APPEL À L'ACTION (10 s) — exercice à faire ensuite.
 
-Contraintes : pas plus de 150 mots. Pas de jargon administratif. Date au format jj/mm/aaaa.`},
-  {tag:'evaluation',tagLabel:'Évaluation',title:'Construire un cas pédagogique',subtitle:'Situation + dossier + consigne + guide enseignant.',tip:'Précisez si le cas est réel (sourcé) ou fictif (à annoncer comme tel).',body:`Rôle : concepteur de cas pédagogiques.
+Fournissez aussi : la description visuelle par séquence, et une transcription complète pour sous-titres.
+
+Contraintes : phrases courtes, lexique accessible, zéro jargon non défini.`},
+  {cat:'supports',title:'Produire une FAQ pédagogique',sub:'Les questions que les étudiants posent vraiment.',tip:'Collez des questions réellement posées en classe pour un résultat ancré dans votre pratique.',example:'« Pourquoi on ne peut pas juste additionner les pourcentages ? » → réponse en 2 §, exemple contraire, référence au ch. 4 des notes.',body:`Rôle : enseignant expérimenté.
+Mission : rédiger une FAQ pédagogique sur [notion].
+
+Contexte :
+- Niveau des étudiants : [public]
+- Confusions les plus fréquentes observées : [liste]
+- Contenu de référence : [chapitre / notes de cours]
+
+Produisez 6 à 8 questions-réponses. Chaque Q-R :
+- Question formulée telle qu'un étudiant la poserait (langage naturel)
+- Réponse en 2-3 paragraphes, ancrée dans le cours
+- Si pertinent : exemple concret, contre-exemple, piste d'approfondissement
+- Référence au passage du cours concerné
+
+Contraintes : réponses honnêtes, assumer les zones de débat ("ce point reste discuté parce que…"), pas de simplification abusive.`},
+  // ============ ÉVALUATION ============
+  {cat:'evaluation',title:'Composer un sujet d’examen robuste à l’IA',sub:'Trois parties : comprendre, analyser, transférer.',tip:'Contextualisez avec un cas spécifique à votre domaine.',example:'P1 : lire le tableau fourni et identifier l’anomalie · P2 : analyser et justifier une interprétation · P3 : transposer à un contexte nouveau et discuter les limites.',body:`Rôle : concepteur d'évaluation.
+Mission : composer un sujet d'examen qui exige du jugement, pas de la restitution.
+
+Cadre :
+- Discipline : [matière]
+- Niveau : [public]
+- Durée : [minutes]
+- Thème : [thème précis]
+- Documents fournis à l'étudiant : [liste ou "aucun"]
+
+Structure attendue en 3 parties :
+Partie 1 — Comprendre et sélectionner (ancrée dans un cas précis fourni).
+Partie 2 — Analyser et justifier (démarche explicite, étapes attendues).
+Partie 3 — Transférer et discuter (variation du contexte, limites).
+
+Pour chaque partie : énoncé, preuve attendue, barème indicatif, critères de réussite.
+
+Contraintes : contextualisation obligatoire, pas de question-type générique restitutive, références vérifiables.`},
+  {cat:'evaluation',title:'Générer un QCM avec distracteurs plausibles',sub:'Questions à choix unique avec feedback par option.',tip:'Donnez des exemples de confusions fréquentes de vos étudiants.',example:'Question → 1 bonne réponse + 3 distracteurs correspondant à 3 confusions typiques, chacun avec un micro-feedback sur « pourquoi c’est faux ».',body:`Rôle : concepteur de QCM.
+Mission : produire [N] questions à choix unique sur [notion], niveau [niveau Bloom].
+
+Exigences par question :
+- Énoncé clair et contextualisé.
+- 1 bonne réponse + 3 distracteurs plausibles (représentant chacun une confusion typique).
+- Feedback par option : pourquoi elle est juste ou fausse, et comment progresser.
+- Référence au contenu source (passage précis).
+
+Contrôles finaux à mentionner :
+- Aucune réponse défendable en double.
+- Pas d'indice involontaire (longueur, formulation, mot absolu).
+- Les distracteurs correspondent à des erreurs réellement observées.
+
+Format : JSON structuré (question, options avec correct:true/false, feedback, source).`},
+  {cat:'evaluation',title:'Construire un cas pédagogique',sub:'Situation + dossier + consigne + guide enseignant.',tip:'Précisez si le cas est réel (sourcé) ou fictif (à annoncer comme tel).',example:'Un cas d’entreprise fictive avec 4 annexes chiffrées, 3 questions progressives, et un guide enseignant listant les lectures acceptables et les erreurs typiques.',body:`Rôle : concepteur de cas pédagogiques.
 Mission : construire un cas d'étude utilisable en évaluation ou en TD.
 
 Cadre :
@@ -500,92 +598,339 @@ Cadre :
 - Objectif pédagogique : [objectif]
 
 Produisez :
-1. SITUATION — contexte, acteurs, enjeux, contraintes (en 150 mots max).
+1. SITUATION — contexte, acteurs, enjeux, contraintes (150 mots max).
 2. DÉCISION ATTENDUE — problème à résoudre, rôle que joue l'étudiant.
-3. DOSSIER — 3 à 5 annexes de données (chiffres, extraits, éléments à analyser).
-4. QUESTIONS — en 3 niveaux : analyser les données / comparer les options / justifier une décision et discuter ses limites.
-5. GUIDE ENSEIGNANT — éléments de correction attendus, variantes acceptables, critères de notation.
+3. DOSSIER — 3 à 5 annexes de données.
+4. QUESTIONS — en 3 niveaux : analyser / comparer / justifier et discuter.
+5. GUIDE ENSEIGNANT — éléments de correction, variantes acceptables, critères.
 
-Contraintes : annexes réalistes mais plausibles, aucune donnée confidentielle, références au cours vérifiables.`},
-  {tag:'cours',tagLabel:'Cours',title:'Écrire une FAQ sur une notion difficile',subtitle:'Les questions que les étudiants posent vraiment.',tip:'Collez des questions réellement posées en classe pour un résultat ancré dans votre pratique.',body:`Rôle : enseignant expérimenté.
-Mission : rédiger une FAQ pédagogique sur [notion].
+Contraintes : annexes réalistes mais plausibles, aucune donnée confidentielle.`},
+  // ============ CORRECTION ============
+  {cat:'correction',title:'Rédiger un feedback bienveillant structuré',sub:'Trois temps : appui, observation, prochaine étape.',tip:'Appuyez le feedback sur une trace observable de la production, pas sur une impression.',example:'« Appui : vous identifiez les deux hypothèses pertinentes. Observation : le lien entre les données et la conclusion n’est pas explicité. Prochaine étape : reprendre le § de conclusion en citant une donnée par hypothèse. »',body:`Rôle : enseignant qui rédige un feedback formatif.
+Mission : m'aider à rédiger un feedback structuré pour un étudiant.
+
+Entrées :
+- Production de l'étudiant : [coller ou décrire]
+- Critères d'évaluation : [liste]
+- Point d'appui identifié : [acquis observable]
+- Point à travailler : [constat précis]
+
+Produisez un feedback en 3 temps :
+1. POINT D'APPUI — reconnaître ce qui fonctionne, de façon spécifique.
+2. OBSERVATION — nommer ce qui pose problème, sur la production.
+3. PROCHAINE ÉTAPE — proposer une action réalisable, avec critère de réussite.
+
+Contraintes : ton bienveillant mais honnête, pas de jugement sur la personne, pas d'injonctions, pas de superlatifs vides.`},
+  {cat:'correction',title:'Construire une grille de correction',sub:'Critères, pondérations, descripteurs par niveau.',tip:'4 à 6 critères maximum pour rester actionnable à la correction.',example:'Grille sur 20 avec 5 critères (Compréhension 25%, Analyse 35%, Justification 25%, Clarté 15%). Chaque critère : 4 niveaux de maîtrise avec descripteurs observables.',body:`Rôle : spécialiste évaluation pédagogique.
+Mission : construire une grille de correction (rubrique) pour une production étudiante.
 
 Contexte :
-- Niveau des étudiants : [public]
-- Confusions les plus fréquentes observées : [liste]
-- Contenu de référence : [chapitre / notes de cours]
+- Production évaluée : [type]
+- Objectif pédagogique visé : [objectif]
+- Niveau : [public]
+- Barème total : [sur 20 / 100]
 
-Produisez 6 à 8 questions-réponses. Chaque Q-R :
-- Question formulée telle qu'un étudiant la poserait (langage naturel, pas académique)
-- Réponse en 2-3 paragraphes, ancrée dans le cours
-- Si pertinent : exemple concret, contre-exemple, piste d'approfondissement
-- Référence au passage du cours concerné
+Produisez une rubrique avec 4 à 6 critères. Pour chaque critère :
+- Nom court et clair
+- Pondération en points
+- Descripteur général (1 phrase)
+- 4 niveaux de maîtrise avec descripteur observable (Insuffisant / En progrès / Satisfaisant / Excellent)
 
-Contraintes : réponses honnêtes, assumer les zones de débat ("ce point reste discuté parce que…"), pas de simplification abusive.`},
-  {tag:'evaluation',tagLabel:'Évaluation',title:'Produire une consigne de discussion',subtitle:'Pour un forum, un débat ou une activité collaborative.',tip:'Précisez les règles de modération et de référencement attendues.',body:`Rôle : animateur pédagogique.
+Contraintes : chaque descripteur doit être observable, pondérations cohérentes avec l'objectif.`},
+  {cat:'correction',title:'Analyser des erreurs récurrentes',sub:'Un tableau d’analyse sans juger la personne.',tip:'Collez 5 à 10 productions anonymisées : l’analyse sera représentative.',example:'Tableau : Erreur | Fréquence | Cause probable (conceptuelle / procédure / lecture) | Remédiation | Vérification. Permet de planifier une séance de remédiation ciblée.',body:`Rôle : enseignant qui analyse une série de copies.
+Mission : identifier les patterns d'erreurs récurrentes.
+
+Entrées :
+- Objectif pédagogique de la production : [objectif]
+- Extraits anonymisés : [coller 5-10 extraits]
+- Critères attendus : [liste]
+
+Produisez un tableau par erreur identifiée :
+| Erreur observée | Exemple anonymisé | Fréquence estimée | Hypothèse explicative | Remédiation proposée | Vérification prévue |
+
+Catégories d'erreurs à distinguer :
+- Erreur conceptuelle, erreur de procédure, erreur de lecture de consigne, erreur de justification (raisonnement implicite).
+
+Contraintes : NE PAS transformer une hypothèse en diagnostic sur la personne. Nommer l'erreur, pas l'étudiant.`},
+  // ============ COMMUNICATION ============
+  {cat:'communication',title:'Courriel aux étudiants (rappel + consigne)',sub:'Un message calibré selon le ton choisi.',tip:'Changez le ton pour vous mettre à l’aise : bienveillant, formel, direct.',example:'Objet : « Dépôt de l’analyse — rappel ». Corps en 90 mots : contexte, action attendue, échéance en gras, phrase de clôture, signature.',body:`Rôle : enseignant qui s'adresse à ses étudiants.
+Mission : rédiger un courriel pour [objet du message].
+
+Paramètres :
+- Public : [L1 / M2 / groupe précis]
+- Ton : [bienveillant / formel / direct]
+- Action attendue : [ce que l'étudiant doit faire]
+- Échéance : [date / heure]
+- Signature : [nom, fonction]
+
+Structure :
+- Objet clair (60 caractères max)
+- Salutation adaptée au ton
+- Contexte en 1-2 phrases
+- Action attendue en liste si plusieurs étapes
+- Échéance mise en évidence
+- Clôture bienveillante
+- Signature
+
+Contraintes : 150 mots max. Pas de jargon administratif. Date au format jj/mm/aaaa.`},
+  {cat:'communication',title:'Consigne de forum / discussion',sub:'Pour un débat ou une activité collaborative.',tip:'Précisez les règles de modération et de référencement attendues.',example:'« Question : "Peut-on parler d’éthique sans parler de contexte ?" · Consigne : 150 mots, 2 références. Règles : désaccord argumenté bienvenu. 3 relances fournies. »',body:`Rôle : animateur pédagogique.
 Mission : rédiger une consigne de discussion pour un forum ou un débat en classe.
 
 Paramètres :
 - Thème / question de départ : [question ouverte]
 - Public : [niveau]
-- Modalité : [forum asynchrone / débat en présentiel / autre]
+- Modalité : [forum asynchrone / débat en présentiel]
 - Durée : [temps imparti]
 
 Produisez :
-1. QUESTION DE DÉPART — ouverte, liée au cours, sans réponse unique évidente.
-2. CONSIGNE — ce que l'étudiant doit produire (longueur, structure, références attendues).
-3. RÈGLES D'INTERACTION — comment réagir à un autre raisonnement (accord argumenté, désaccord constructif, question de clarification).
+1. QUESTION DE DÉPART — ouverte, liée au cours, sans réponse unique.
+2. CONSIGNE — longueur, structure, références attendues.
+3. RÈGLES D'INTERACTION — comment réagir à un autre raisonnement.
 4. 3 RELANCES — pour l'enseignant si la discussion s'enlise.
-5. CRITÈRES D'ÉVALUATION — pour noter la participation (qualité > quantité).
+5. CRITÈRES D'ÉVALUATION — qualité > quantité.
 
-Contraintes : la question doit être formulée pour accueillir plusieurs réponses légitimes, pas pour piéger.`},
-  {tag:'correction',tagLabel:'Correction',title:'Analyser des erreurs récurrentes',subtitle:'Un tableau d’analyse sans juger la personne.',tip:'Collez 5 à 10 productions anonymisées : l’analyse sera représentative.',body:`Rôle : enseignant qui analyse une série de copies.
-Mission : identifier les patterns d'erreurs récurrentes dans un lot de productions.
+Contraintes : la question doit accueillir plusieurs réponses légitimes.`},
+  {cat:'communication',title:'Message à un parent (secondaire)',sub:'Factuel, non accusatoire, orienté action.',tip:'Appuyez-vous sur des faits observables, pas sur des interprétations.',example:'« Bonjour, je souhaite partager une observation concernant X : [fait précis sur 2 semaines]. J’aimerais convenir d’un entretien pour envisager ensemble… »',body:`Rôle : enseignant qui écrit à un parent.
+Mission : rédiger un message factuel et constructif.
 
 Entrées :
-- Objectif pédagogique de la production : [objectif]
-- Extraits de productions anonymisées : [coller 5-10 extraits]
-- Critères attendus : [liste]
+- Contexte : [situation observée]
+- Faits précis : [dates, exemples concrets]
+- Objectif du message : [information / demande d'entretien / mise au point]
+- Ton : [formel bienveillant]
 
-Produisez un tableau avec, par erreur identifiée :
-| Erreur observée | Exemple anonymisé | Fréquence estimée | Hypothèse explicative | Remédiation proposée | Vérification prévue |
+Structure :
+- Objet clair, sans dramatisation
+- Formule d'ouverture respectueuse
+- Observation factuelle (dates, faits, pas d'interprétation)
+- Ce qui a été tenté côté école
+- Proposition d'action (entretien, aménagement, suivi)
+- Clôture ouverte
 
-Catégories d'erreurs à distinguer :
-- Erreur conceptuelle (mauvaise compréhension d'une notion)
-- Erreur de procédure (étape mal exécutée)
-- Erreur de lecture de consigne
-- Erreur de justification (raisonnement implicite ou absent)
+Contraintes : jamais de jugement sur l'enfant, pas de "il est…", seulement "j'observe que…". Pas plus de 180 mots.`},
+  // ============ VÉRIFICATION ============
+  {cat:'verification',title:'Vérifier des références fournies',sub:'Un registre pour contrôler sans se faire piéger.',tip:'Collez les références une par une pour un contrôle rigoureux.',example:'Tableau pour chaque ref : auteur / titre / date / DOI → vérifier existence réelle / correspondance avec l’affirmation / date de consultation.',body:`Rôle : documentaliste de recherche.
+Mission : m'aider à construire un registre de vérification pour une série de références.
 
-Contraintes : NE PAS transformer une hypothèse en diagnostic sur la personne. Nommer l'erreur, pas l'étudiant. Proposer des remédiations réalistes.`}
+Entrée :
+- Liste des références à contrôler : [coller]
+- Affirmation que chaque ref est censée appuyer : [si pertinent]
+
+Pour chaque référence, produisez un registre en 6 lignes :
+1. Référence telle que fournie
+2. Auteur, titre, date, support annoncés
+3. Identifiant ou adresse à vérifier (DOI, ISBN, URL)
+4. Statut : à vérifier auprès de la source primaire
+5. Correspondance entre la ref et l'affirmation (à contrôler)
+6. Date de consultation et preuve conservée
+
+Contraintes : ne pas prétendre vérifier vous-même l'existence (vous ne pouvez pas). Me donner un cadre pour que je vérifie.`},
+  {cat:'verification',title:'Repérer les fragilités d’un argument',sub:'Analyse critique d’une production (étudiante ou IA).',tip:'Fonctionne aussi bien sur une production étudiante que sur une sortie d’IA à relire.',example:'Points relevés : « Généralisation hâtive § 2 », « Absence de contre-exemple § 4 », « Argument d’autorité § 6 » + proposition d’une relance par point.',body:`Rôle : relecteur critique.
+Mission : identifier les fragilités d'une argumentation.
+
+Texte à analyser :
+"""
+[coller le texte]
+"""
+
+Produisez une analyse par point faible :
+1. Localisation (§, phrase)
+2. Nature du problème (généralisation, absence de preuve, biais, argument d'autorité, raccourci causal, confusion corrélation/causalité…)
+3. Pourquoi c'est problématique
+4. Suggestion de reformulation ou de complément
+
+Fournissez aussi :
+- 3 relances à poser à l'auteur pour qu'il clarifie
+- Les points forts à préserver
+
+Contraintes : critique du raisonnement, jamais de la personne. Suggestions concrètes.`},
+  {cat:'verification',title:'Préparer un entretien oral de vérification',sub:'Pour comprendre comment un travail a été produit.',tip:'Objectif : vérifier la compréhension, pas piéger. Préparer les questions évite les biais.',example:'5 questions ancrées dans la production (« Expliquez votre choix § 3 »…) + grille d’observation en 4 critères + protocole de clôture.',body:`Rôle : enseignant qui prépare un entretien pédagogique.
+Mission : préparer un entretien oral pour vérifier la compréhension d'une production étudiante.
+
+Contexte :
+- Production remise : [résumé]
+- Points qui m'interrogent : [liste]
+- Durée prévue de l'entretien : [minutes]
+
+Produisez :
+1. OBJECTIF DE L'ENTRETIEN — formulation neutre, sans présupposer la faute.
+2. 5 QUESTIONS contextualisées : "Expliquez comment vous avez abordé [passage précis]", "Quelle donnée a été déterminante ?", "Quelle alternative avez-vous écartée ?", "Comment votre réponse changerait avec [variation] ?", "Quelles limites voyez-vous ?"
+3. GRILLE D'OBSERVATION : cohérence, justification, mobilisation des sources, transfert, discussion des limites.
+4. PROTOCOLE DE CLÔTURE : laisser s'expliquer, consigner les observations, appliquer la procédure prévue.
+
+Contraintes : vérifier la compréhension, pas prouver la fraude. Permettre à l'étudiant de s'exprimer.`},
+  // ============ DIFFÉRENCIATION ============
+  {cat:'differenciation',title:'Décliner un exercice en 3 niveaux',sub:'Même objectif, trois degrés d’autonomie.',tip:'Idéal pour un TD hétérogène ou un travail en autonomie.',example:'Niveau 1 : énoncé guidé avec étapes · Niveau 2 : énoncé semi-ouvert · Niveau 3 : énoncé-défi avec variation. Même objectif, même critère de réussite.',body:`Rôle : enseignant en charge d'un groupe hétérogène.
+Mission : décliner un exercice en 3 niveaux de difficulté, pour le même objectif.
+
+Entrée :
+- Objectif pédagogique visé : [objectif]
+- Exercice de base : [énoncé actuel]
+- Public : [niveau global, hétérogénéité constatée]
+
+Produisez 3 versions de l'exercice :
+NIVEAU 1 — ÉTAIEMENT : énoncé décomposé en étapes, données fournies, aide méthodologique visible.
+NIVEAU 2 — RÉFÉRENCE : énoncé semi-ouvert, démarche à construire.
+NIVEAU 3 — DÉFI : énoncé plus ouvert, variation du contexte, exigence de justification accrue.
+
+Pour chaque niveau :
+- Énoncé
+- Aides disponibles
+- Preuve attendue (identique dans la nature, pas dans la forme)
+- Critère de réussite
+
+Contraintes : même objectif pédagogique dans les 3 cas. Pas de "niveau facile" / "niveau fort" dévalorisant.`},
+  {cat:'differenciation',title:'Adapter un support pour une accessibilité renforcée',sub:'DYS, non-francophone, déficient visuel ou auditif.',tip:'Précisez le profil : les adaptations ne sont pas interchangeables.',example:'Pour un étudiant DYS : phrases segmentées, police OpenDyslexic, interligne 1,5, encadrés de synthèse, lexique en annexe, version audio du support.',body:`Rôle : spécialiste accessibilité pédagogique.
+Mission : adapter un support pour un besoin spécifique, sans baisser l'exigence.
+
+Entrée :
+- Support à adapter : [coller / décrire]
+- Profil visé : [DYS / non-francophone / déficience visuelle / auditive / TDAH…]
+- Objectif pédagogique à préserver : [objectif]
+
+Produisez une version adaptée :
+1. PRINCIPES D'ADAPTATION retenus pour ce profil (3 à 5 principes).
+2. TRANSFORMATIONS CONCRÈTES :
+   - Mise en forme (police, interligne, contrastes)
+   - Structuration (titres, listes, encadrés)
+   - Lexique (simplification, annexes, glossaire)
+   - Modalités complémentaires (audio, visuel, tactile)
+3. CE QUI N'EST PAS MODIFIÉ : les attendus, la rigueur, la profondeur.
+4. VÉRIFICATIONS À FAIRE auprès de l'étudiant.
+
+Contraintes : adaptation du support, pas de l'exigence. Nommer précisément ce qui change et ce qui ne change pas.`},
+  {cat:'differenciation',title:'Proposer un parcours de remédiation ciblée',sub:'Pour un ou plusieurs étudiants en difficulté identifiée.',tip:'Fonctionne à partir des erreurs analysées via le prompt "Analyser des erreurs récurrentes".',example:'Parcours en 3 étapes : 1) revoir la notion-prérequis (15 min) · 2) exercice ciblé sur la confusion repérée · 3) ré-essai de la tâche initiale avec feedback.',body:`Rôle : enseignant en situation de remédiation.
+Mission : construire un parcours court pour aider un étudiant (ou un petit groupe) à surmonter une difficulté précise.
+
+Entrées :
+- Difficulté observée : [erreur / confusion précise]
+- Pré-requis supposés mais non maîtrisés : [à préciser]
+- Objectif de retour : [tâche que l'étudiant doit à nouveau réussir]
+- Temps disponible : [minutes / séances]
+
+Produisez un parcours en 3 étapes :
+1. CONSOLIDATION DU PRÉ-REQUIS — explication courte + un exercice simple.
+2. CIBLAGE DE LA CONFUSION — un exercice conçu pour mettre en évidence puis dépasser la confusion.
+3. RÉ-ESSAI — reprise de la tâche initiale, avec feedback immédiat et critère de réussite.
+
+Pour chaque étape : temps estimé, support nécessaire, trace à conserver.
+
+Contraintes : parcours réaliste tenu dans le temps imparti. Pas de "il faut qu'il travaille plus" : indiquer précisément QUOI travailler.`},
+  // ============ ORGANISATION ============
+  {cat:'organisation',title:'Rédiger une clause d’usage de l’IA (syllabus)',sub:'Projet de clause à adapter institutionnellement.',tip:'À adapter au règlement de votre établissement avant diffusion.',example:'« Les outils d’IA peuvent être utilisés pour reformuler, structurer, générer des idées. Ils ne peuvent pas être utilisés pour produire la rédaction finale. L’étudiant déclare les outils utilisés… »',body:`Rôle : conseiller pédagogique.
+Mission : me proposer un projet de clause d'usage de l'IA pour un syllabus.
+
+Contexte :
+- Type d'enseignement : [TD / cours / séminaire…]
+- Niveau : [public]
+- Évaluation concernée : [nature de l'évaluation]
+- Politique institutionnelle de référence : [à préciser ou "aucune pour l'instant"]
+
+Produisez une clause structurée en 4 points :
+1. USAGES AUTORISÉS — ce que l'étudiant peut faire avec l'IA, précisément.
+2. USAGES INTERDITS — ce qui est hors cadre, avec justification pédagogique.
+3. OBLIGATION DE DÉCLARATION — comment l'étudiant déclare les outils utilisés, leur contribution, les vérifications effectuées.
+4. RESPONSABILITÉ — l'étudiant reste responsable de l'exactitude et de la conformité.
+
+Ajoutez une mention finale : "clause à valider institutionnellement avant diffusion".
+
+Contraintes : rédaction juridiquement prudente, pédagogiquement claire, formulations non ambiguës.`},
+  {cat:'organisation',title:'Planifier une séquence pédagogique',sub:'D’un objectif annuel à un calendrier opérationnel.',tip:'Précisez les contraintes réelles : jours fériés, périodes d’examen, autres enseignements.',example:'Calendrier semaine par semaine : séances, livrables intermédiaires, jalons de validation, points de régulation collective.',body:`Rôle : coordinateur de parcours.
+Mission : me proposer un calendrier opérationnel pour une séquence pédagogique.
+
+Entrées :
+- Objectif de la séquence : [objectif]
+- Durée totale : [semaines]
+- Nombre de séances : [N]
+- Charge totale étudiant estimée : [heures]
+- Contraintes de calendrier : [vacances, examens, autres cours concurrents]
+
+Produisez un calendrier détaillé :
+1. Tableau semaine par semaine : séance, contenu, type d'activité, charge étudiante, livrable attendu.
+2. 3 jalons de régulation (où vous ferez un point avec le groupe).
+3. Signalement des semaines à risque (densité, chevauchement).
+4. Marge de sécurité intégrée (1 à 2 semaines).
+
+Contraintes : réaliste, pas de sur-planification. Prévoir des espaces pour les imprévus.`},
+  {cat:'organisation',title:'Rédiger une consigne de projet (long cours)',sub:'Objectifs, livrables, jalons, critères — tout dans un seul document.',tip:'Précisez le travail individuel ou collectif et les ressources accessibles.',example:'Document type : contexte du projet · livrables (3) · jalons intermédiaires · critères d’évaluation · modalités d’accompagnement · délais et procédure de rendu.',body:`Rôle : enseignant en charge d'un projet d'étudiants.
+Mission : rédiger la consigne complète d'un projet.
+
+Contexte :
+- Discipline / cours : [matière]
+- Niveau : [public]
+- Durée du projet : [semaines]
+- Modalité : [individuel / binôme / groupe]
+- Objectif pédagogique : [objectif]
+- Évaluation : [coefficient / modalités]
+
+Produisez un document structuré :
+1. CONTEXTE ET ENJEUX — pourquoi ce projet, à quoi il prépare.
+2. OBJECTIFS pédagogiques précis (acquis visés).
+3. LIVRABLES attendus (type, format, longueur).
+4. JALONS INTERMÉDIAIRES avec dates (au moins 2).
+5. CRITÈRES D'ÉVALUATION avec pondérations.
+6. RESSOURCES AUTORISÉES / INTERDITES (dont IA — cf. clause).
+7. ACCOMPAGNEMENT PRÉVU : permanences, forum, retours intermédiaires.
+8. PROCÉDURE DE RENDU : plateforme, format, délai, pénalités.
+
+Contraintes : consigne auto-portante (l'étudiant n'a pas besoin de poser 10 questions pour commencer).`},
 ];
 
 const grid = document.getElementById('prompts-grid');
-grid.innerHTML = PROMPTS.map((p,i) => `
-  <article class="prompt-card">
-    <div class="prompt-head">
-      <div class="ptitle">
-        <h3>${p.title}</h3>
-        <p>${p.subtitle}</p>
+const chips = document.getElementById('cat-chips');
+const counter = document.getElementById('counter');
+
+function catLabel(id){const c = CATS.find(c=>c.id===id); return c ? c.label : id;}
+
+// Chip rendering
+chips.innerHTML = CATS.map(c => {
+  const count = c.id === 'all' ? PROMPTS.length : PROMPTS.filter(p=>p.cat===c.id).length;
+  return `<button class="cat-chip ${c.id==='all'?'active':''}" data-cat="${c.id}">${c.emoji ? c.emoji + ' ' : ''}${c.label} <span class="count">${count}</span></button>`;
+}).join('');
+
+// Prompt card rendering
+function renderPrompts(filter='all'){
+  const list = filter === 'all' ? PROMPTS : PROMPTS.filter(p=>p.cat===filter);
+  counter.textContent = list.length === PROMPTS.length ? `${list.length} prompts affichés` : `${list.length} / ${PROMPTS.length} prompts`;
+  grid.innerHTML = list.map((p,i)=>{
+    const realIdx = PROMPTS.indexOf(p);
+    return `
+    <article class="prompt-card">
+      <div class="prompt-head">
+        <div class="ptitle">
+          <h3>${p.title}</h3>
+          <p class="psub">${p.sub}</p>
+        </div>
+        <span class="prompt-tag cat-${p.cat}">${catLabel(p.cat)}</span>
       </div>
-      <span class="prompt-tag ${p.tag}">${p.tagLabel}</span>
-    </div>
-    <pre class="prompt-body" id="p${i}">${p.body}</pre>
-    <div class="prompt-foot">
-      <span class="ptip">💡 ${p.tip}</span>
-      <button class="copy-btn" data-i="${i}">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-        Copier
-      </button>
-    </div>
-  </article>
-`).join('');
+      <pre class="prompt-body">${p.body}</pre>
+      <div class="prompt-example">
+        <strong>Exemple de résultat</strong>
+        <em>${p.example}</em>
+      </div>
+      <div class="prompt-foot">
+        <span class="prompt-tip">💡 ${p.tip}</span>
+        <button class="copy-btn" data-i="${realIdx}">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copier
+        </button>
+      </div>
+    </article>`;
+  }).join('');
+}
+
+renderPrompts();
+
+chips.addEventListener('click', e => {
+  const b = e.target.closest('.cat-chip');
+  if(!b) return;
+  chips.querySelectorAll('.cat-chip').forEach(c=>c.classList.remove('active'));
+  b.classList.add('active');
+  renderPrompts(b.dataset.cat);
+});
 
 const toast = document.getElementById('toast');
-function showToast(msg){
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(()=>toast.classList.remove('show'), 2000);
-}
+function showToast(msg){toast.textContent = msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'), 2000);}
 
 grid.addEventListener('click', e => {
   const b = e.target.closest('.copy-btn');
@@ -606,7 +951,6 @@ grid.addEventListener('click', e => {
 document.querySelectorAll('.checklist-print').forEach(btn => {
   btn.addEventListener('click', () => {
     const card = btn.closest('.checklist-card');
-    const original = document.body.innerHTML;
     const printable = `
       <style>
         body{font-family:Georgia,serif;color:#1a2847;padding:40px;max-width:800px;margin:0 auto}
@@ -620,7 +964,7 @@ document.querySelectorAll('.checklist-print').forEach(btn => {
       </style>
       <div class="brand">LE PROF · L'INTELLIGENCE PÉDAGOGIQUE DERRIÈRE L'IA</div>
       <h2>${card.querySelector('h3').textContent}</h2>
-      <p>${card.querySelector('p').textContent}</p>
+      <p>${card.querySelector('.psub').textContent}</p>
       <ul>${[...card.querySelectorAll('.checklist-list li span')].map(s=>`<li>${s.textContent}</li>`).join('')}</ul>
       <div class="foot">oscarkakpo-create.github.io/LEPROF · Oscar Kakpo · 2026</div>
     `;
