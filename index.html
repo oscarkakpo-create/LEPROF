@@ -11,6 +11,9 @@
 <meta property="og:url" content="https://oscarkakpo-create.github.io/LEPROF/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,0..100;1,9..144,400..600,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 <title>LE PROF · L'intelligence pédagogique derrière l'IA</title>
 <style>
 :root{
@@ -29,8 +32,8 @@
   --paper:#ffffff;
   --line:#e4e2d8;
   --radius:14px;
-  --serif:'Playfair Display','Didot',Georgia,serif;
-  --sans:Inter,'Segoe UI',-apple-system,Arial,sans-serif;
+  --serif:'Fraunces','Playfair Display',Georgia,serif;
+  --sans:'Instrument Sans',-apple-system,'Segoe UI',Arial,sans-serif;
   --shadow-sm:0 2px 10px #1a28470a;
   --shadow:0 8px 32px #1a28471a;
   --shadow-lg:0 32px 80px #1a284733,0 4px 12px #1a28471c;
@@ -39,10 +42,10 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream-2);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,p{margin:0}
-h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:700;letter-spacing:-.015em}
-h1{font-size:clamp(38px,6vw,64px);line-height:1.05}
-h2{font-size:clamp(28px,3.5vw,40px);line-height:1.15}
-h3{font-size:22px;line-height:1.25}
+h1,h2,h3{font-family:var(--serif);color:var(--navy);font-weight:600;letter-spacing:-.02em;font-variation-settings:"SOFT" 60,"opsz" 144}
+h1{font-size:clamp(42px,6.5vw,72px);line-height:1.02;font-weight:700;letter-spacing:-.035em;font-variation-settings:"SOFT" 50,"opsz" 144}
+h2{font-size:clamp(30px,3.8vw,44px);line-height:1.12;letter-spacing:-.025em}
+h3{font-size:22px;line-height:1.25;font-weight:600}
 p{line-height:1.7}
 a{color:var(--teal);text-decoration:none;transition:color .15s}
 a:hover{color:var(--navy)}
@@ -94,7 +97,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offse
 .cover-collection{font-size:9px;letter-spacing:2.2px;font-weight:600;color:var(--gold);text-transform:uppercase;line-height:1.4}
 .cover-illus{align-self:center;margin:12px 0}
 .cover-illus svg{width:120px;height:120px}
-.cover-title{font-family:var(--serif);font-size:48px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.cover-title{font-family:var(--serif);font-size:52px;font-weight:700;letter-spacing:-.03em;line-height:.95;font-variation-settings:"SOFT" 40,"opsz" 144}
 .cover-sub{font-family:var(--serif);font-style:italic;font-size:14px;opacity:.9;margin-top:12px;line-height:1.4}
 .cover-rule{width:36px;height:2px;background:var(--gold);margin:14px 0}
 .cover-tags{font-size:9px;letter-spacing:2px;color:var(--gold);font-weight:600;margin-top:4px}
@@ -212,6 +215,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
       <a href="#chapitres">Le livre</a>
       <a href="#atelier">L'atelier</a>
       <a href="#auteur">L'auteur</a>
+      <a href="ressources.html">Ressources</a>
       <a class="nav-cta" href="livre/le-prof.pdf" download>Télécharger</a>
     </div>
   </div>

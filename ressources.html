@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1a2847">
+<meta name="description" content="LE PROF · Ressources libres : prompts prêts à copier, checklists imprimables, modèles. Pour les enseignants qui gardent la main sur l'IA.">
+<meta property="og:title" content="LE PROF — Ressources libres pour les enseignants">
+<meta property="og:description" content="Prompts, checklists et modèles à télécharger, librement.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..800,0..100;1,9..144,400..600,0..100&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>LE PROF · Ressources</title>
+<style>
+:root{
+  --navy:#1a2847;--navy-2:#243461;--navy-soft:#eef0f5;
+  --gold:#d4a056;--gold-soft:#f6ecd9;--gold-deep:#8a6324;
+  --teal:#2a7a68;--teal-soft:#e7f0ed;
+  --ink:#1a2237;--body:#3b4252;--muted:#7a8094;
+  --cream:#f7f3ea;--cream-2:#faf6ee;--paper:#ffffff;--line:#e4e2d8;
+  --radius:14px;
+  --serif:'Fraunces','Playfair Display',Georgia,serif;
+  --sans:'Instrument Sans',-apple-system,'Segoe UI',Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;
+  --shadow-sm:0 2px 10px #1a28470a;--shadow:0 8px 32px #1a28471a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream-2);color:var(--body);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);font-weight:600;letter-spacing:-.02em;font-variation-settings:"SOFT" 60,"opsz" 144}
+h1{font-size:clamp(38px,5.5vw,56px);line-height:1.05;font-weight:700;letter-spacing:-.035em;font-variation-settings:"SOFT" 50,"opsz" 144}
+h2{font-size:clamp(26px,3vw,36px);line-height:1.15;letter-spacing:-.025em}
+h3{font-size:19px;line-height:1.3;font-weight:600}
+h4{font-size:15px;font-weight:600}
+p{line-height:1.7}
+a{color:var(--teal);text-decoration:none;transition:color .15s}
+a:hover{color:var(--navy)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+.eyebrow{font-size:11px;letter-spacing:2.4px;font-weight:700;color:var(--teal);text-transform:uppercase}
+.eyebrow.gold{color:var(--gold)}
+.gold-rule{width:52px;height:3px;background:var(--gold);display:block;border-radius:2px;margin:16px 0}
+.serif-italic{font-family:var(--serif);font-style:italic;font-weight:400}
+
+.nav{position:sticky;top:0;z-index:30;background:#faf6eecc;backdrop-filter:blur(14px);border-bottom:1px solid #e4e2d866}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1200px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy);text-decoration:none;font-size:17px;letter-spacing:.8px}
+.brand-mark{width:36px;height:36px;background:var(--navy);border-radius:8px;display:grid;place-items:center}
+.brand-mark svg{width:22px;height:22px}
+.nav-links{display:flex;gap:28px;align-items:center;font-size:14px}
+.nav-links a{color:var(--body);font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--navy)}
+.nav-cta{background:var(--navy);color:#fff;padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600}
+.nav-cta:hover{background:var(--navy-2);color:#fff}
+
+.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:10px;font-size:14px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:all .15s;cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn.primary:hover{background:var(--navy-2);transform:translateY(-1px);box-shadow:var(--shadow)}
+.btn.outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.outline:hover{background:var(--navy);color:#fff}
+.btn.small{padding:8px 14px;font-size:12px}
+.btn.ghost{background:transparent;color:var(--teal);border-color:transparent;padding-left:0}
+.btn.ghost:hover{color:var(--navy)}
+
+.hero{padding:60px 0 50px;text-align:center}
+.hero h1{margin:16px 0 16px}
+.hero .lead{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--navy);max-width:620px;margin:0 auto;line-height:1.5}
+
+.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:30px 0 50px}
+.tab{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:600;font-size:13px;color:var(--body);cursor:pointer;transition:all .15s;font-family:inherit}
+.tab:hover{border-color:var(--navy)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+section{padding:60px 0}
+section.alt{background:var(--cream)}
+
+.section-head{text-align:center;margin-bottom:40px}
+.section-head h2{margin-top:12px}
+.section-head .lead{font-size:16px;color:var(--muted);max-width:620px;margin:14px auto 0;line-height:1.6}
+.section-head .gold-rule{margin:18px auto}
+
+/* PROMPTS */
+.prompts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.prompt-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;transition:border-color .2s,box-shadow .2s;display:flex;flex-direction:column;gap:14px}
+.prompt-card:hover{border-color:var(--gold);box-shadow:var(--shadow-sm)}
+.prompt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.prompt-head .ptitle{flex:1}
+.prompt-head h3{margin-bottom:4px}
+.prompt-head p{font-size:13px;color:var(--muted);line-height:1.5}
+.prompt-tag{font-size:9px;letter-spacing:1.6px;font-weight:700;padding:4px 9px;border-radius:5px;text-transform:uppercase;background:var(--teal-soft);color:var(--teal);white-space:nowrap}
+.prompt-tag.cours{background:var(--teal-soft);color:var(--teal)}
+.prompt-tag.evaluation{background:#efeaf6;color:#6b4e8c}
+.prompt-tag.correction{background:var(--gold-soft);color:var(--gold-deep)}
+.prompt-tag.communication{background:#f5e6e9;color:#8c5261}
+.prompt-body{background:var(--cream-2);border:1px solid var(--line);border-radius:9px;padding:14px 16px;font-family:var(--mono);font-size:12.5px;line-height:1.65;color:#2d3645;white-space:pre-wrap;max-height:220px;overflow:auto}
+.prompt-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
+.prompt-foot .ptip{font-size:11px;color:var(--muted);font-style:italic;flex:1}
+.copy-btn{background:var(--navy);color:#fff;padding:8px 14px;border-radius:7px;font-size:12px;font-weight:600;border:0;cursor:pointer;font-family:inherit;display:inline-flex;align-items:center;gap:6px;transition:background .15s}
+.copy-btn:hover{background:var(--navy-2)}
+.copy-btn.copied{background:var(--teal)}
+
+/* CHECKLISTS */
+.checklists-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.checklist-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:all .2s;position:relative}
+.checklist-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:var(--shadow)}
+.checklist-icon{width:46px;height:46px;background:var(--navy);color:var(--gold);border-radius:11px;display:grid;place-items:center;font-family:var(--serif);font-size:19px;font-weight:700;margin-bottom:16px}
+.checklist-card h3{margin-bottom:8px}
+.checklist-card p{font-size:14px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+.checklist-list{list-style:none;padding:0;margin:0 0 22px}
+.checklist-list li{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.55;color:var(--body);padding:5px 0}
+.checklist-list li svg{color:var(--gold);flex-shrink:0;margin-top:2px}
+.checklist-print{display:inline-flex;align-items:center;gap:7px;color:var(--teal);font-weight:600;font-size:13px;cursor:pointer;background:transparent;border:0;padding:0;font-family:inherit}
+.checklist-print:hover{color:var(--navy)}
+
+/* MODELES */
+.models-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.model-row{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:flex;align-items:center;gap:18px;transition:all .15s}
+.model-row:hover{border-color:var(--gold)}
+.model-ext{width:48px;height:52px;background:var(--navy);color:var(--gold);border-radius:7px;display:grid;place-items:center;font-size:10px;font-weight:700;letter-spacing:.5px;font-family:var(--mono);flex-shrink:0}
+.model-info{flex:1}
+.model-info h4{font-size:15px;font-family:var(--serif);color:var(--navy);margin-bottom:3px}
+.model-info p{font-size:12px;color:var(--muted);margin:0}
+.model-row .btn{flex-shrink:0}
+
+/* COMING */
+.coming{background:var(--cream);border:1px dashed var(--line);border-radius:12px;padding:28px 32px;margin-top:40px;text-align:center}
+.coming h3{margin-bottom:8px}
+.coming p{color:var(--muted);font-size:14px;max-width:520px;margin:0 auto 16px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-brand{color:#fff;font-weight:700;letter-spacing:1px}
+.footer-links a{color:#ffffffcc;margin-left:24px}
+.footer-links a:hover{color:var(--gold)}
+.footer-sub{text-align:center;margin-top:28px;padding-top:20px;border-top:1px solid #ffffff1a;color:#ffffff80;font-size:12px}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--navy);color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:var(--shadow);opacity:0;transition:all .3s;z-index:100}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:900px){
+  .prompts-grid,.checklists-grid,.models-grid{grid-template-columns:1fr}
+  .nav-links a:not(.nav-cta):not(.active){display:none}
+}
+@media(max-width:560px){
+  section{padding:44px 0}
+  .wrap{padding:0 20px}
+  .prompt-body{font-size:11.5px}
+}
+@media print{
+  .nav,footer,.tabs,.hero,.checklists-grid > div:not(.print-target){display:none!important}
+  body{background:#fff}
+  .checklist-card{box-shadow:none;border:none;page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24"><circle cx="15" cy="7" r="2.3" fill="#d4a056"/><path d="M15 7 L9 15 M15 7 L12 15 M15 7 L15.5 15.5 M15 7 L17 15" stroke="#d4a056" stroke-width="0.9" opacity="0.65" stroke-linecap="round"/><circle cx="12" cy="15.5" r="2.6" fill="#fff"/><rect x="9.5" y="15.5" width="5" height="3.5" rx="0.6" fill="#fff"/></svg>
+      </span>
+      <span>LE PROF</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#chapitres">Le livre</a>
+      <a href="index.html#atelier">L'atelier</a>
+      <a href="ressources.html" class="active">Ressources</a>
+      <a class="nav-cta" href="livre/le-prof.pdf" download>Télécharger</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow gold">Bibliothèque libre</div>
+    <h1>Des ressources prêtes à l'emploi.</h1>
+    <p class="lead">Prompts, checklists et modèles pour les enseignants qui veulent garder la main sur l'IA. Libres, gratuits, à utiliser dans votre contexte.</p>
+  </div>
+</section>
+
+<!-- PROMPTS -->
+<section id="prompts">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">1 · Prompts contextualisés</div>
+      <h2>12 prompts prêts à copier</h2>
+      <span class="gold-rule"></span>
+      <p class="lead">À utiliser dans votre outil IA habituel. Chaque prompt porte un cadre : rôle, objectif, contraintes et format attendu. Remplacez les crochets <code style="background:var(--navy-soft);padding:1px 5px;border-radius:3px;font-size:13px">[…]</code> par votre contexte.</p>
+    </div>
+
+    <div class="prompts-grid" id="prompts-grid">
+      <!-- Cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLISTS -->
+<section class="alt" id="checklists">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">2 · Checklists imprimables</div>
+      <h2>Pour relire, décider, cadrer</h2>
+      <span class="gold-rule"></span>
+      <p class="lead">Trois fiches A4 à imprimer ou à garder ouvertes. Elles ne décident pas à votre place : elles vous rappellent ce qu'il faut regarder.</p>
+    </div>
+
+    <div class="checklists-grid">
+
+      <article class="checklist-card">
+        <div class="checklist-icon">01</div>
+        <h3>Avant de confier un sujet à l'IA</h3>
+        <p>10 questions pour ne pas déléguer ce qui est à vous.</p>
+        <ul class="checklist-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ai-je formulé l'objectif d'apprentissage ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Qui sont les étudiants visés ? Quel niveau réel ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quelle preuve observable d'apprentissage j'attends ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quelles contraintes de contexte / culture / langue ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quelle source de référence je garde comme boussole ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quels usages de l'IA j'autorise aux étudiants ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quel critère de réussite non ambigu ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quel temps de traitement raisonnable ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Comment je vérifierai la fiabilité du résultat ?</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quelle décision reste pour moi, non négociable ?</span></li>
+        </ul>
+        <button class="checklist-print" data-print="01">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimer / PDF
+        </button>
+      </article>
+
+      <article class="checklist-card">
+        <div class="checklist-icon">02</div>
+        <h3>Examen robuste à l'IA</h3>
+        <p>Les 7 vérifications avant diffusion d'une épreuve.</p>
+        <ul class="checklist-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Contextualisation : données ou cas spécifiques, non génériques.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Transfert : la réponse exige d'appliquer à une situation nouvelle.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Justification : une étape demande d'expliciter le raisonnement.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Références : l'étudiant doit citer un passage précis fourni.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Discussion : une partie demande d'identifier les limites.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Clause d'usage de l'IA explicite, cohérente avec l'épreuve.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Test en autonomie IA : j'ai essayé — ça ne passe pas tel quel.</span></li>
+        </ul>
+        <button class="checklist-print" data-print="02">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimer / PDF
+        </button>
+      </article>
+
+      <article class="checklist-card">
+        <div class="checklist-icon">03</div>
+        <h3>Relecture d'une production IA</h3>
+        <p>7 points pour relire sans se faire avoir.</p>
+        <ul class="checklist-list">
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Exactitude factuelle — chaque chiffre, nom, date vérifiable.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Références — existent et disent ce qui est annoncé (sinon : hallucination).</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Alignement — répond vraiment à l'objectif, pas à côté.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Niveau — adapté au public, ni trop simple, ni jargonneux.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Ton — pas générique, cohérent avec votre voix d'enseignant.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Biais — stéréotypes, culture dominante, exemples non pertinents.</span></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Confidentialité — rien transmis que vous n'auriez partagé publiquement.</span></li>
+        </ul>
+        <button class="checklist-print" data-print="03">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimer / PDF
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODELES -->
+<section id="modeles">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">3 · Modèles à venir</div>
+      <h2>Des gabarits prêts à adapter</h2>
+      <span class="gold-rule"></span>
+      <p class="lead">Les modèles Word et PDF sont en préparation. En attendant, l'atelier LE PROF produit déjà ces trames directement en ligne.</p>
+    </div>
+
+    <div class="models-grid">
+      <div class="model-row">
+        <div class="model-ext">RUBRIC</div>
+        <div class="model-info">
+          <h4>Grille de correction type</h4>
+          <p>Critères, pondérations, descripteurs à adapter.</p>
+        </div>
+        <a class="btn small outline" href="atelier.html#/studio/correction">Dans l'atelier</a>
+      </div>
+      <div class="model-row">
+        <div class="model-ext">FICHE</div>
+        <div class="model-info">
+          <h4>Fiche de séance alignée</h4>
+          <p>Objectif → activité → preuve → feedback.</p>
+        </div>
+        <a class="btn small outline" href="atelier.html#/studio/cours">Dans l'atelier</a>
+      </div>
+      <div class="model-row">
+        <div class="model-ext">MAIL</div>
+        <div class="model-info">
+          <h4>Courriels-type aux étudiants</h4>
+          <p>Rappel, consigne IA, feedback collectif.</p>
+        </div>
+        <a class="btn small outline" href="atelier.html#/studio/communication">Dans l'atelier</a>
+      </div>
+      <div class="model-row">
+        <div class="model-ext">CLAUSE</div>
+        <div class="model-info">
+          <h4>Clause d'usage de l'IA (syllabus)</h4>
+          <p>Projet de clause à valider institutionnellement.</p>
+        </div>
+        <a class="btn small outline" href="atelier.html#/studio/verification">Dans l'atelier</a>
+      </div>
+    </div>
+
+    <div class="coming">
+      <h3>Et bientôt…</h3>
+      <p>Un extrait offert d'un chapitre, un glossaire IA-pédagogie FR/EN, et les modèles téléchargeables en Word + PDF. Suivez le repo <a href="https://github.com/oscarkakpo-create/LEPROF" target="_blank" rel="noopener">GitHub</a> pour être au courant.</p>
+      <a class="btn primary" href="livre/le-prof.pdf" download>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Télécharger le livre
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">LE PROF · L'intelligence pédagogique derrière l'IA</div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="livre/le-prof.pdf" download>Le livre</a>
+        <a href="atelier.html">L'atelier</a>
+        <a href="https://github.com/oscarkakpo-create/LEPROF" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-sub">© 2026 Oscar Kakpo · Ressources libres sous usage pédagogique</div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Prompt copié ✓</div>
+
+<script>
+const PROMPTS = [
+  {tag:'cours',tagLabel:'Cours',title:'Formuler un objectif observable',subtitle:'À partir d’une notion, un objectif pédagogique mesurable.',tip:'Utilisez le verbe de Bloom qui correspond à votre niveau visé.',body:`Rôle : vous êtes mon assistant pédagogique.
+Objectif : m'aider à formuler un objectif d'apprentissage observable, aligné sur la taxonomie de Bloom.
+
+Contexte :
+- Discipline : [matière]
+- Niveau : [L1 / L3 / M1…]
+- Notion : [notion précise]
+- Niveau Bloom visé : [Comprendre / Analyser / Évaluer / Créer…]
+
+Produisez :
+1. L'objectif reformulé selon la structure "À l'issue de la séance, l'étudiant sera capable de [verbe observable] [objet], à partir de [données], en produisant [trace], selon [critères]".
+2. Trois exemples d'activités d'entraînement alignées.
+3. Une preuve d'apprentissage attendue, observable.
+4. Un critère de réussite non ambigu.
+
+Contraintes : pas de verbes vagues (comprendre, connaître, savoir). Pas d'invention de références.`},
+  {tag:'cours',tagLabel:'Cours',title:'Structurer une séance (90 min)',subtitle:'Un déroulé aligné objectif → activité → preuve → feedback.',tip:'Précisez le minutage et les prérequis pour un résultat utilisable tel quel.',body:`Rôle : ingénieur pédagogique.
+Mission : me proposer un déroulé de séance de [durée] minutes.
+
+Entrées :
+- Objectif d'apprentissage : [objectif observable]
+- Public : [niveau, effectif, modalité présentiel/distanciel]
+- Prérequis : [acquis supposés]
+- Contenu de référence : [notion / document source]
+
+Produisez un déroulé en 6 étapes :
+1. Activation des acquis (minutage, question de départ)
+2. Apport ciblé (notions essentielles tirées du contenu)
+3. Mise en activité (consigne précise, production attendue)
+4. Mise en commun (comparaison, justification)
+5. Vérification des acquis (preuve observable)
+6. Transfert (variation du problème)
+
+Pour chaque étape : minute approximative, matériel, interaction attendue.
+Finissez par : "Ce qui est à préparer avant la séance".`},
+  {tag:'evaluation',tagLabel:'Évaluation',title:'Composer un sujet d’examen robuste à l’IA',subtitle:'Trois parties : comprendre, analyser, transférer.',tip:'Contextualisez avec un cas spécifique à votre domaine (données, acteurs, contraintes).',body:`Rôle : concepteur d'évaluation.
+Mission : composer un sujet d'examen qui exige du jugement, pas de la restitution.
+
+Cadre :
+- Discipline : [matière]
+- Niveau : [public]
+- Durée : [minutes]
+- Thème : [thème précis du cours]
+- Documents fournis à l'étudiant : [liste ou "aucun"]
+
+Structure attendue en 3 parties :
+Partie 1 — Comprendre et sélectionner (ancrée dans un cas précis fourni).
+Partie 2 — Analyser et justifier (démarche explicite, étapes attendues).
+Partie 3 — Transférer et discuter (variation du contexte, limites).
+
+Pour chaque partie : énoncé, preuve attendue, barème indicatif, critères de réussite.
+
+Contraintes : contextualisation obligatoire (données ou cas spécifiques), pas de question-type générique restitutive, références au cours vérifiables.`},
+  {tag:'evaluation',tagLabel:'Évaluation',title:'Générer un QCM avec distracteurs plausibles',subtitle:'Questions à choix unique avec feedback par option.',tip:'Donnez des exemples de confusions fréquentes de vos étudiants : les distracteurs seront plus fins.',body:`Rôle : concepteur de QCM.
+Mission : produire [N] questions à choix unique sur [notion], niveau [niveau Bloom].
+
+Exigences par question :
+- Énoncé clair et contextualisé, pas de piège de formulation.
+- 1 bonne réponse + 3 distracteurs plausibles (représentant chacun une confusion typique).
+- Feedback par option : pourquoi elle est juste ou fausse, et comment progresser.
+- Référence au contenu source (passage précis).
+
+Contrôles finaux à mentionner :
+- Aucune réponse défendable en double.
+- Pas d'indice involontaire (longueur, formulation, mot absolu).
+- Les distracteurs correspondent à des erreurs réellement observées en classe.
+
+Format de sortie : JSON structuré (question, options avec correct:true/false, feedback, source).`},
+  {tag:'correction',tagLabel:'Correction',title:'Rédiger un feedback bienveillant structuré',subtitle:'Trois temps : appui, observation, prochaine étape.',tip:'Appuyez le feedback sur une trace observable de la production, pas sur une impression.',body:`Rôle : enseignant qui rédige un feedback formatif.
+Mission : m'aider à rédiger un feedback structuré pour un étudiant.
+
+Entrées :
+- Production de l'étudiant : [coller ou décrire]
+- Critères d'évaluation : [liste]
+- Point d'appui identifié : [acquis observable]
+- Point à travailler : [constat précis sur la production]
+
+Produisez un feedback en 3 temps :
+1. POINT D'APPUI — reconnaître ce qui fonctionne, de façon spécifique.
+2. OBSERVATION — nommer ce qui pose problème, sur la production (pas sur la personne).
+3. PROCHAINE ÉTAPE — proposer une action réalisable, avec un critère de réussite clair.
+
+Contraintes : ton bienveillant mais honnête, pas de jugement sur la personne, pas de "il faut" injonctif, pas de superlatifs vides ("excellent travail").`},
+  {tag:'correction',tagLabel:'Correction',title:'Construire une grille de correction',subtitle:'Critères, pondérations, descripteurs par niveau.',tip:'4 à 6 critères maximum pour rester actionnable à la correction.',body:`Rôle : spécialiste évaluation pédagogique.
+Mission : construire une grille de correction (rubrique) pour une production étudiante.
+
+Contexte :
+- Production évaluée : [type : rapport, oral, dossier…]
+- Objectif pédagogique visé : [objectif]
+- Niveau : [public]
+- Barème total : [sur 20 / sur 100 / …]
+
+Produisez une rubrique avec 4 à 6 critères. Pour chaque critère :
+- Nom court et clair
+- Pondération en points
+- Descripteur général (en 1 phrase)
+- 4 niveaux de maîtrise avec descripteur observable (Insuffisant / En progrès / Satisfaisant / Excellent)
+
+Contraintes : chaque descripteur doit être observable (pas "montre de la rigueur" mais "cite une référence précise par argument"). Pondérations cohérentes avec l'objectif.`},
+  {tag:'cours',tagLabel:'Cours',title:'Transformer un support en storyboard de slides',subtitle:'10 à 12 slides avec idée centrale et interaction par slide.',tip:'Fournissez le document source : la trame s’appuiera dessus plutôt que d’inventer.',body:`Rôle : scénariste pédagogique.
+Mission : transformer le contenu suivant en un storyboard de [10-12] slides pour une séance de [durée].
+
+Contenu source :
+"""
+[coller votre texte / plan / notes]
+"""
+
+Pour chaque slide produisez :
+- Numéro + titre court
+- Idée centrale (1 phrase)
+- Points-clés (3 maximum)
+- Illustration suggérée (schéma / image / rien)
+- Interaction prévue (question au public / mini-exercice / pause réflexion)
+- Transition vers la slide suivante
+
+Structure attendue : problème → objectif → notions → exemple → mise en activité → synthèse → vérification.
+
+Contraintes : pas de slide-texte, pas plus de 3 points-clés par slide, prévoir au moins 3 pauses actives.`},
+  {tag:'communication',tagLabel:'Communication',title:'Courriel aux étudiants (rappel + consigne)',subtitle:'Un message calibré selon le ton choisi.',tip:'Changez le ton pour vous mettre à l’aise : bienveillant, formel, direct.',body:`Rôle : enseignant qui s'adresse à ses étudiants.
+Mission : rédiger un courriel pour [objet du message].
+
+Paramètres :
+- Public : [L1 / M2 / groupe précis]
+- Ton : [bienveillant / formel / direct]
+- Action attendue : [ce que l'étudiant doit faire]
+- Échéance : [date / heure]
+- Signature : [nom, fonction]
+
+Structure :
+- Objet clair (max 60 caractères)
+- Salutation adaptée au ton
+- Contexte en 1-2 phrases
+- Action attendue en liste si plusieurs étapes
+- Échéance mise en évidence
+- Phrase de clôture bienveillante
+- Signature
+
+Contraintes : pas plus de 150 mots. Pas de jargon administratif. Date au format jj/mm/aaaa.`},
+  {tag:'evaluation',tagLabel:'Évaluation',title:'Construire un cas pédagogique',subtitle:'Situation + dossier + consigne + guide enseignant.',tip:'Précisez si le cas est réel (sourcé) ou fictif (à annoncer comme tel).',body:`Rôle : concepteur de cas pédagogiques.
+Mission : construire un cas d'étude utilisable en évaluation ou en TD.
+
+Cadre :
+- Discipline : [matière]
+- Niveau : [public]
+- Durée de traitement : [minutes]
+- Statut des données : [réelles sourcées / fictives explicitement déclarées]
+- Objectif pédagogique : [objectif]
+
+Produisez :
+1. SITUATION — contexte, acteurs, enjeux, contraintes (en 150 mots max).
+2. DÉCISION ATTENDUE — problème à résoudre, rôle que joue l'étudiant.
+3. DOSSIER — 3 à 5 annexes de données (chiffres, extraits, éléments à analyser).
+4. QUESTIONS — en 3 niveaux : analyser les données / comparer les options / justifier une décision et discuter ses limites.
+5. GUIDE ENSEIGNANT — éléments de correction attendus, variantes acceptables, critères de notation.
+
+Contraintes : annexes réalistes mais plausibles, aucune donnée confidentielle, références au cours vérifiables.`},
+  {tag:'cours',tagLabel:'Cours',title:'Écrire une FAQ sur une notion difficile',subtitle:'Les questions que les étudiants posent vraiment.',tip:'Collez des questions réellement posées en classe pour un résultat ancré dans votre pratique.',body:`Rôle : enseignant expérimenté.
+Mission : rédiger une FAQ pédagogique sur [notion].
+
+Contexte :
+- Niveau des étudiants : [public]
+- Confusions les plus fréquentes observées : [liste]
+- Contenu de référence : [chapitre / notes de cours]
+
+Produisez 6 à 8 questions-réponses. Chaque Q-R :
+- Question formulée telle qu'un étudiant la poserait (langage naturel, pas académique)
+- Réponse en 2-3 paragraphes, ancrée dans le cours
+- Si pertinent : exemple concret, contre-exemple, piste d'approfondissement
+- Référence au passage du cours concerné
+
+Contraintes : réponses honnêtes, assumer les zones de débat ("ce point reste discuté parce que…"), pas de simplification abusive.`},
+  {tag:'evaluation',tagLabel:'Évaluation',title:'Produire une consigne de discussion',subtitle:'Pour un forum, un débat ou une activité collaborative.',tip:'Précisez les règles de modération et de référencement attendues.',body:`Rôle : animateur pédagogique.
+Mission : rédiger une consigne de discussion pour un forum ou un débat en classe.
+
+Paramètres :
+- Thème / question de départ : [question ouverte]
+- Public : [niveau]
+- Modalité : [forum asynchrone / débat en présentiel / autre]
+- Durée : [temps imparti]
+
+Produisez :
+1. QUESTION DE DÉPART — ouverte, liée au cours, sans réponse unique évidente.
+2. CONSIGNE — ce que l'étudiant doit produire (longueur, structure, références attendues).
+3. RÈGLES D'INTERACTION — comment réagir à un autre raisonnement (accord argumenté, désaccord constructif, question de clarification).
+4. 3 RELANCES — pour l'enseignant si la discussion s'enlise.
+5. CRITÈRES D'ÉVALUATION — pour noter la participation (qualité > quantité).
+
+Contraintes : la question doit être formulée pour accueillir plusieurs réponses légitimes, pas pour piéger.`},
+  {tag:'correction',tagLabel:'Correction',title:'Analyser des erreurs récurrentes',subtitle:'Un tableau d’analyse sans juger la personne.',tip:'Collez 5 à 10 productions anonymisées : l’analyse sera représentative.',body:`Rôle : enseignant qui analyse une série de copies.
+Mission : identifier les patterns d'erreurs récurrentes dans un lot de productions.
+
+Entrées :
+- Objectif pédagogique de la production : [objectif]
+- Extraits de productions anonymisées : [coller 5-10 extraits]
+- Critères attendus : [liste]
+
+Produisez un tableau avec, par erreur identifiée :
+| Erreur observée | Exemple anonymisé | Fréquence estimée | Hypothèse explicative | Remédiation proposée | Vérification prévue |
+
+Catégories d'erreurs à distinguer :
+- Erreur conceptuelle (mauvaise compréhension d'une notion)
+- Erreur de procédure (étape mal exécutée)
+- Erreur de lecture de consigne
+- Erreur de justification (raisonnement implicite ou absent)
+
+Contraintes : NE PAS transformer une hypothèse en diagnostic sur la personne. Nommer l'erreur, pas l'étudiant. Proposer des remédiations réalistes.`}
+];
+
+const grid = document.getElementById('prompts-grid');
+grid.innerHTML = PROMPTS.map((p,i) => `
+  <article class="prompt-card">
+    <div class="prompt-head">
+      <div class="ptitle">
+        <h3>${p.title}</h3>
+        <p>${p.subtitle}</p>
+      </div>
+      <span class="prompt-tag ${p.tag}">${p.tagLabel}</span>
+    </div>
+    <pre class="prompt-body" id="p${i}">${p.body}</pre>
+    <div class="prompt-foot">
+      <span class="ptip">💡 ${p.tip}</span>
+      <button class="copy-btn" data-i="${i}">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        Copier
+      </button>
+    </div>
+  </article>
+`).join('');
+
+const toast = document.getElementById('toast');
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'), 2000);
+}
+
+grid.addEventListener('click', e => {
+  const b = e.target.closest('.copy-btn');
+  if(!b) return;
+  const i = +b.dataset.i;
+  const text = PROMPTS[i].body;
+  navigator.clipboard.writeText(text).then(()=>{
+    b.classList.add('copied');
+    b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copié';
+    showToast('Prompt copié ✓');
+    setTimeout(()=>{
+      b.classList.remove('copied');
+      b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copier';
+    }, 2200);
+  }).catch(()=>showToast('Impossible de copier — sélectionnez manuellement.'));
+});
+
+document.querySelectorAll('.checklist-print').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.checklist-card');
+    const original = document.body.innerHTML;
+    const printable = `
+      <style>
+        body{font-family:Georgia,serif;color:#1a2847;padding:40px;max-width:800px;margin:0 auto}
+        h2{font-family:Georgia,serif;font-size:28px;margin-bottom:8px}
+        p{color:#555;margin-bottom:24px}
+        ul{list-style:none;padding:0}
+        li{display:flex;gap:12px;padding:10px 0;border-bottom:1px dotted #ccc;font-size:14px;line-height:1.6}
+        li:before{content:'☐';color:#d4a056;font-size:18px;flex-shrink:0}
+        .brand{text-align:center;margin-bottom:40px;font-size:11px;letter-spacing:2.5px;color:#2a7a68}
+        .foot{text-align:center;margin-top:40px;font-size:10px;color:#999;letter-spacing:1px}
+      </style>
+      <div class="brand">LE PROF · L'INTELLIGENCE PÉDAGOGIQUE DERRIÈRE L'IA</div>
+      <h2>${card.querySelector('h3').textContent}</h2>
+      <p>${card.querySelector('p').textContent}</p>
+      <ul>${[...card.querySelectorAll('.checklist-list li span')].map(s=>`<li>${s.textContent}</li>`).join('')}</ul>
+      <div class="foot">oscarkakpo-create.github.io/LEPROF · Oscar Kakpo · 2026</div>
+    `;
+    const w = window.open('', '_blank');
+    w.document.write('<!doctype html><html><head><title>LE PROF — Checklist</title></head><body>'+printable+'</body></html>');
+    w.document.close();
+    setTimeout(()=>w.print(), 400);
+  });
+});
+</script>
+
+</body>
+</html>
