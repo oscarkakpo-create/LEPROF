@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#244b3d">
+<meta name="description" content="Le livre associé à LE PROF — téléchargement libre et gratuit.">
+<meta property="og:title" content="LE PROF — Le livre">
+<meta property="og:description" content="Le livre qui accompagne l'atelier du professeur augmenté. Téléchargement libre.">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://oscarkakpo-create.github.io/LEPROF/livre.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>LE PROF · Le livre</title>
+<style>
+:root{--ink:#25392f;--muted:#69746d;--green:#284e3e;--green-2:#3c6654;--green-soft:#eef3ed;--bg:#fafaf7;--line:#e4e7df;--white:#fff;--orange:#aa5e38;--shadow:0 5px 20px #26392f06;--radius:16px;--sans:Inter,"Segoe UI",Arial,sans-serif;--serif:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.65}
+a{color:var(--green)}
+h1,h2,h3,p{margin:0}
+h1{font-family:var(--serif);font-size:44px;font-weight:400;line-height:1.15;letter-spacing:-.85px}
+h2{font-size:20px;font-weight:650;letter-spacing:-.25px}
+h3{font-size:15px;font-weight:650}
+.wrap{max-width:1040px;margin:0 auto;padding:34px 28px 60px}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px;gap:14px;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink)}
+.brand-mark{width:42px;height:46px;border-radius:12px 12px 5px 12px;background:var(--green);color:#fff;display:grid;place-items:center;position:relative;font-weight:700}
+.brand-mark:after{content:'';width:8px;height:8px;background:#d7b67b;border-radius:100%;position:absolute;right:-3px;top:5px;border:2px solid var(--bg)}
+.brand-name{font-weight:800;letter-spacing:1.1px;font-size:21px;line-height:1.2;display:block}
+.brand-sub{font-size:10px;letter-spacing:.25px;color:var(--muted);display:block;margin-top:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:11px 18px;background:#fff;font-size:12px;font-weight:600;text-decoration:none;color:var(--ink);transition:background .15s,border-color .15s,transform .15s}
+.btn:hover{background:#f1f4ed;border-color:#c8d4c3}
+.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
+.btn.primary:hover{background:#1d3e30}
+.btn.big{padding:16px 26px;font-size:14px;border-radius:12px}
+.hero{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin-bottom:60px}
+.cover{width:260px;height:360px;background:linear-gradient(145deg,#2d5744,#1a3b2b);border-radius:8px;box-shadow:0 24px 60px #0e2a1c33,0 2px 6px #0e2a1c22;position:relative;overflow:hidden;color:#fff;padding:28px 22px;display:flex;flex-direction:column;justify-content:space-between}
+.cover:before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:#1a3b2b;box-shadow:inset -1px 0 0 #d7b67b33}
+.cover .tag{font-size:9px;letter-spacing:2.5px;opacity:.75;font-weight:600;text-transform:uppercase}
+.cover .title{font-family:var(--serif);font-size:30px;line-height:1.1;letter-spacing:-.5px;margin-top:14px}
+.cover .accent{width:34px;height:3px;background:#d7b67b;margin-top:12px}
+.cover .author{font-size:11px;opacity:.85;letter-spacing:.4px}
+.hero-copy .eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;color:#7b8875;text-transform:uppercase}
+.hero-copy h1{margin:14px 0 18px}
+.hero-copy p.lede{font-size:16px;color:#4b5b4e;max-width:520px;margin-bottom:24px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.cta-note{font-size:11px;color:var(--muted);margin-top:14px}
+.badge-free{display:inline-flex;align-items:center;gap:5px;background:#e9f2e9;color:#466b49;padding:5px 10px;border-radius:6px;font-size:10px;font-weight:650;letter-spacing:.3px;margin-bottom:12px}
+.pitch{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px}
+.pitch-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.pitch-card h3{margin-bottom:8px;color:var(--green)}
+.pitch-card p{font-size:13px;color:#5b6b5b}
+.section{margin-bottom:50px}
+.section .eyebrow{font-size:10px;letter-spacing:1.9px;font-weight:750;color:#7b8875;text-transform:uppercase;margin-bottom:10px}
+.section h2{margin-bottom:16px}
+.section p{color:#4b5b4e;max-width:720px}
+.toc{background:#f0f4ec;border:1px solid #dce5d2;border-radius:var(--radius);padding:24px 28px}
+.toc ol{margin:12px 0 0;padding-left:22px;color:#4b5b4e}
+.toc li{padding:4px 0}
+.footer{margin-top:70px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted)}
+.pdf-missing{background:#fdf6ec;border:1px solid #ead9bd;border-radius:12px;padding:16px 20px;color:#8a6a3a;font-size:12px;margin-top:14px;line-height:1.6}
+.pdf-missing strong{color:#704f20}
+@media(max-width:780px){.hero{grid-template-columns:1fr;gap:32px}.cover{margin:0 auto}.pitch{grid-template-columns:1fr}h1{font-size:34px}.wrap{padding:24px 20px 50px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Retour à LE PROF">
+      <span class="brand-mark">📖</span>
+      <span>
+        <span class="brand-name">LE PROF</span>
+        <span class="brand-sub">L'atelier du professeur augmenté</span>
+      </span>
+    </a>
+    <a class="btn" href="index.html">← Retour à l'atelier</a>
+  </header>
+
+  <section class="hero">
+    <div class="cover" aria-hidden="true">
+      <div>
+        <div class="tag">Le livre</div>
+        <div class="title">LE PROF</div>
+        <div class="accent"></div>
+      </div>
+      <div class="author">L'atelier du professeur augmenté</div>
+    </div>
+    <div class="hero-copy">
+      <span class="badge-free">● Téléchargement libre</span>
+      <div class="eyebrow">Le livre associé</div>
+      <h1>Le livre qui accompagne l'atelier.</h1>
+      <p class="lede">La démarche, les principes et les méthodes derrière le poste de travail. Pensé pour les enseignants qui veulent garder la main — et qui refusent de déléguer leur jugement à la machine.</p>
+      <div class="cta-row">
+        <a class="btn primary big" href="livre/le-prof.pdf" download>⬇ Télécharger le PDF</a>
+        <a class="btn big" href="index.html">Ouvrir l'atelier</a>
+      </div>
+      <p class="cta-note">Libre, gratuit, sans inscription. PDF — vous pouvez le lire, l'imprimer, le partager.</p>
+      <div class="pdf-missing" id="pdf-missing" hidden>
+        <strong>PDF pas encore déposé.</strong> Le fichier <code>livre/le-prof.pdf</code> n'existe pas encore dans le repo. Déposez-le via GitHub (voir <code>livre/README.md</code>) et il sera disponible ici automatiquement.
+      </div>
+    </div>
+  </section>
+
+  <section class="pitch">
+    <div class="pitch-card">
+      <h3>La démarche</h3>
+      <p>Pourquoi "préparer, évaluer, transformer, relire" plutôt que "générer, publier, oublier". La colonne vertébrale pédagogique.</p>
+    </div>
+    <div class="pitch-card">
+      <h3>Les méthodes</h3>
+      <p>Les protocoles qui tiennent devant une classe réelle. Comment utiliser l'IA sans qu'elle utilise votre pensée à votre place.</p>
+    </div>
+    <div class="pitch-card">
+      <h3>Le poste de travail</h3>
+      <p>Comment l'atelier LE PROF applique concrètement ces principes — et où il refuse de décider à votre place.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Ce que vous y trouverez</div>
+    <h2>Un livre court, utile, à côté de l'atelier.</h2>
+    <p>Pas un manuel exhaustif. Un compagnon : les cadres de pensée, les gestes professionnels, et les repères pour reprendre la main sur ce que l'IA vous rend. Lecture rapide, références pratiques, exemples issus du terrain.</p>
+  </section>
+
+  <section class="section toc">
+    <div class="eyebrow">Sommaire indicatif</div>
+    <h2>Au programme</h2>
+    <ol>
+      <li>Garder la main — le pacte pédagogique</li>
+      <li>Préparer : d'une matière brute à une ressource qui fait apprendre</li>
+      <li>Évaluer : contextualiser, exiger, rendre robuste</li>
+      <li>Transformer : donner une nouvelle vie aux supports</li>
+      <li>Relire : la boucle qui fait la différence</li>
+      <li>L'atelier en pratique — ce que le poste de travail vous apporte</li>
+    </ol>
+    <p style="margin-top:14px;font-size:12px;color:var(--muted)">Le sommaire définitif sera celui du PDF.</p>
+  </section>
+
+  <footer class="footer">
+    <span>LE PROF · L'atelier du professeur augmenté</span>
+    <span><a href="index.html">Ouvrir l'atelier</a> · <a href="https://github.com/oscarkakpo-create/LEPROF" target="_blank" rel="noopener">Code source</a></span>
+  </footer>
+
+</div>
+
+<script>
+// Vérifie discrètement si le PDF est présent ; affiche un avertissement sinon.
+fetch('livre/le-prof.pdf', {method:'HEAD'}).then(r=>{
+  if(!r.ok){ document.getElementById('pdf-missing').hidden = false; }
+}).catch(()=>{ document.getElementById('pdf-missing').hidden = false; });
+</script>
+
+</body>
+</html>
