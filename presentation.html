@@ -131,6 +131,10 @@ section .section-head .lead{font-size:17px;color:var(--muted);max-width:620px;ma
 .tool-badge{position:absolute;top:16px;right:16px;font-size:9px;letter-spacing:1.5px;font-weight:700;padding:4px 9px;border-radius:5px;text-transform:uppercase}
 .tool-badge.essential{background:var(--teal-soft);color:var(--teal)}
 .tool-badge.premium{background:var(--gold-soft);color:#8a6324}
+.tool-card.locked{cursor:default;opacity:.85;background:#fdfaf1;border-style:dashed}
+.tool-card.locked:hover{border-color:#e9d6a8;transform:none;box-shadow:none}
+.tool-card.locked .tool-icon{background:var(--gold-soft);color:#8a6324}
+.tool-foot{display:inline-block;margin-top:14px;font-size:11px;font-weight:600;color:#8a6324;letter-spacing:.4px}
 
 /* PILLARS */
 .pillars-section{background:var(--navy);color:#fff}
@@ -375,30 +379,33 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
         <h3>Moodle Lab</h3>
         <p>Exporter en GIFT, H5P, MBZ. Vos quiz prêts pour la plateforme en un geste.</p>
       </a>
-      <a class="tool-card" href="index.html#/studio/correction">
-        <span class="tool-badge premium">Démo · Premium bientôt</span>
+      <div class="tool-card locked" aria-disabled="true">
+        <span class="tool-badge premium">Déploiement bientôt</span>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg>
         </div>
         <h3>Studio Correction</h3>
-        <p>Grilles de correction, feedback structurés, analyse d'erreurs sans juger la personne.</p>
-      </a>
-      <a class="tool-card" href="index.html#/studio/verification">
-        <span class="tool-badge premium">Démo · Premium bientôt</span>
+        <p>Grilles de correction, feedback structurés en trois temps (appui / observation / prochaine étape), analyse d'erreurs sans juger la personne.</p>
+        <span class="tool-foot">Disponible dans la formule complète</span>
+      </div>
+      <div class="tool-card locked" aria-disabled="true">
+        <span class="tool-badge premium">Déploiement bientôt</span>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <h3>Studio Vérification</h3>
-        <p>Vérifier avec méthode : registre de références, repérage lexical, entretien oral.</p>
-      </a>
-      <a class="tool-card" href="index.html#/studio/organisation">
-        <span class="tool-badge premium">Démo · Premium bientôt</span>
+        <p>Vérifier avec méthode : registre de références (6 lignes par source), repérage lexical de fragilités, entretien oral avec grille d'observation.</p>
+        <span class="tool-foot">Disponible dans la formule complète</span>
+      </div>
+      <div class="tool-card locked" aria-disabled="true">
+        <span class="tool-badge premium">Déploiement bientôt</span>
         <div class="tool-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         </div>
         <h3>Studio Organisation</h3>
-        <p>Moyennes CC/examen, planning, rendez-vous .ics, prochaines étapes sous contrôle.</p>
-      </a>
+        <p>Moyennes CC/examen avec anomalies détectées (CSV), événements .ics prêts à importer dans votre agenda, planning de séquence et prochaines étapes sous contrôle.</p>
+        <span class="tool-foot">Disponible dans la formule complète</span>
+      </div>
     </div>
     <div style="text-align:center;margin-top:40px">
       <a class="btn outline" href="index.html">Entrer dans l'atelier</a>
@@ -414,7 +421,7 @@ footer{background:var(--navy);color:#ffffffb3;padding:48px 0 32px;font-size:13px
       <div class="author-info">
         <div class="eyebrow">À propos de l'auteur</div>
         <h3>Oscar Kakpo</h3>
-        <p>Ingénieur pédagogique, concepteur de parcours FOAD et formateur. LE PROF rassemble les méthodes qu'il met en pratique au quotidien avec les enseignants qui apprennent à composer avec l'IA, sans y perdre leur jugement.</p>
+        <p>Praticien autodidacte de la pédagogie à l'ère de l'IA. Il conçoit, teste et affine ses propres méthodes sur le terrain, aux côtés d'enseignants qui veulent utiliser les nouveaux outils sans y perdre leur jugement. LE PROF rassemble ce qu'il met en pratique au quotidien.</p>
       </div>
     </div>
   </div>
